@@ -1,0 +1,272 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="../styles/header-style.css" />
+    <link rel="stylesheet" href="../styles/lettre.css" />
+    <script src="js/menu.js"></script>
+  </head>
+  <body>
+    <header class="top-wrapper">
+      <div class="header-card">
+        <!-- PARTIE HAUTE -->
+        <div class="header-top">
+          <a href="header.html" class="logo-link">
+            <div class="logo-icon">📘</div>
+            <h1 class="site-title">Tifawt Académie</h1>
+          </a>
+
+          <div class="auth-buttons">
+            <a href="index.php" class="btn login">Connexion</a>
+            <a href="inscription.php" class="btn register">Inscription</a>
+          </div>
+        </div>
+
+        <!-- PARTIE BASSE -->
+        <nav class="header-nav">
+          <ul class="menu">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Cours ▾</a>
+              <ul class="submenu">
+                <li><a href="#">Arabe</a></li>
+                <li><a href="#">Mathématiques</a></li>
+                <li><a href="#">Français</a></li>
+                <li><a href="#">Vidéos</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#">Histoires</a></li>
+            <li><a href="#">Vidéos</a></li>
+            <li><a href="espace.php">Espace Élève</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Section Titre de la leçon -->
+    <section class="lesson-badge">
+      <div class="badge-container">
+        <div class="badge-side side-fr">
+          <span class="level-tag">Niveau: A1-1</span>
+          <h1>Leçon : La lettre Ha2</h1>
+        </div>
+
+        <div class="badge-center">
+          <img
+            src="../img/lettre-ha2/ha2.png"
+            alt="Lettre Alif"
+            class="floating-letter"
+          />
+        </div>
+
+        <div class="badge-side side-ar">
+          <h2 class="arabic-subtitle">الدرس الأول: حرف الحاء</h2>
+        </div>
+      </div>
+    </section>
+    <!-- section lettre -->
+    <section class="letter-hero">
+      <div class="video-container">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/t6xfGTXCkLo?si=smxShjuTmO8TdeSF"
+          title="YouTube video player"
+          frameborder="0"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="quick-links">
+        <a href="#game-container" class="btn-link quiz-link">
+          <span class="icon">🎮</span> Commencer les Jeux
+        </a>
+        <a
+          href="fiches/alif-exercice.pdf"
+          target="_blank"
+          class="btn-link download-link"
+        >
+          <span class="icon">📄</span> Télécharger la Fiche (PDF)
+        </a>
+      </div>
+    </section>
+    <!-- SECTION : ÉCOUTER LE SON 🔊 -->
+    <section class="letter-syllables">
+      <h2>Les sons de la lettre</h2>
+      <div class="syllables-grid">
+        <div class="syllable-card">
+          <img src="../img/lettre-ha2/ha.jpg" alt="Alif Fatha" />
+          <button
+            class="play-btn-circle"
+            onclick="playCustomSound('../sounds/haa2/Ha.mp3')"
+          >
+            🔊
+          </button>
+        </div>
+        <div class="syllable-card">
+          <img src="../img/lettre-ha2/Ho.jpg" alt="Alif Damma" />
+          <button
+            class="play-btn-circle"
+            onclick="playCustomSound('../sounds/haa2/Ho.mp3')"
+          >
+            🔊
+          </button>
+        </div>
+        <div class="syllable-card">
+          <img src="../img/lettre-ha2/Hi.jpg" alt="Alif Kasra" />
+          <button
+            class="play-btn-circle"
+            onclick="playCustomSound('../sounds/haa2/Hi.mp3')"
+          >
+            🔊
+          </button>
+        </div>
+        <div class="syllable-card">
+          <img src="../img/lettre-ha2/h.jpg" alt="Alif Sokoun" />
+          <button
+            class="play-btn-circle"
+            onclick="playCustomSound('../sounds/haa2/h.mp3')"
+          >
+            🔊
+          </button>
+        </div>
+        <div class="syllable-card">
+          <img src="../img/lettre-ha2/haa.png" alt="Alif Sokoun" />
+          <button
+            class="play-btn-circle"
+            onclick="playCustomSound('../sounds/haa2/Haa.mp3')"
+          >
+            🔊
+          </button>
+        </div>
+        <div class="syllable-card">
+          <img src="../img/lettre-ha2/hoo.png" alt="Alif Sokoun" />
+          <button
+            class="play-btn-circle"
+            onclick="playCustomSound('../sounds/haa2/hoo.mp3')"
+          >
+            🔊
+          </button>
+        </div>
+        <div class="syllable-card">
+          <img src="../img/lettre-ha2/hii.png" alt="Alif Sokoun" />
+          <button
+            class="play-btn-circle"
+            onclick="playCustomSound('../sounds/haa2/hii.mp3')"
+          >
+            🔊
+          </button>
+        </div>
+        <div class="syllable-card">
+          <img src="../img/lettre-ha2/hone.png" alt="Alif Sokoun" />
+          <button
+            class="play-btn-circle"
+            onclick="playCustomSound('../sounds/haa2/hone.mp3')"
+          >
+            🔊
+          </button>
+        </div>
+        <div class="syllable-card">
+          <img src="../img/lettre-ha2/hine.png" alt="Alif Sokoun" />
+          <button
+            class="play-btn-circle"
+            onclick="playCustomSound('../sounds/haa2/hine.mp3')"
+          >
+            🔊
+          </button>
+        </div>
+        <div class="syllable-card">
+          <img src="../img/lettre-ha2/hane.png" alt="Alif Sokoun" />
+          <button
+            class="play-btn-circle"
+            onclick="playCustomSound('../sounds/haa2/hane.mp3')"
+          >
+            🔊
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- 3️⃣ SECTION : MOTS SIMPLES AVEC ALIF -->
+    <section class="letter-vocabulary">
+      <h2>Je découvre les mots</h2>
+      <div class="vocab-grid">
+        <div
+          class="vocab-card"
+          onclick="playCustomSound('../sounds/haa2/piscine.mp3', this)"
+        >
+          <div class="img-container">
+            <img src="../img/lettre-ha2/piscine.jpg" alt="Lion" />
+          </div>
+          <div class="card-info">
+            <span class="audio-hint">Écouter 🔊</span>
+          </div>
+        </div>
+
+        <div
+          class="vocab-card"
+          onclick="playCustomSound('../sounds/haa2/agriculteur.mp3', this)"
+        >
+          <div class="img-container">
+            <img src="../img/lettre-ha2/agriculteur.jpg" alt="agriculteur" />
+          </div>
+          <div class="card-info">
+            <span class="audio-hint">Écouter 🔊</span>
+          </div>
+        </div>
+
+        <div
+          class="vocab-card"
+          onclick="playCustomSound('../sounds/haa2/valise.mp3', this)"
+        >
+          <div class="img-container">
+            <img src="../img/lettre-ha2/valise.jpg" alt="Maman" />
+          </div>
+          <div class="card-info">
+            <span class="audio-hint">Écouter 🔊</span>
+          </div>
+        </div>
+
+        <div
+          class="vocab-card"
+          onclick="playCustomSound('../sounds/haa2/journal.mp3', this)"
+        >
+          <div class="img-container">
+            <img src="../img/lettre-ha2/journal.jpg" alt="Carafe" />
+          </div>
+          <div class="card-info">
+            <span class="audio-hint">Écouter 🔊</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="progress-container">
+      <div class="progress-header">
+        <span id="progress-text">Exercice 1 / 10</span>
+        <span id="progress-percentage">0%</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div id="progress-fill"></div>
+      </div>
+    </div>
+
+    <div id="game-container"></div>
+    <!-- 4️⃣ SECTION : MINI ACTIVITÉ (TRÈS IMPORTANT) -->
+    <section id="game-container"></section>
+
+    <!-- SECTION : CONTINUER ➡️ -->
+    <section class="next-step">
+      <a href="ba.html" class="next-btn">➡️ Lettre suivante : Ba</a>
+    </section>
+    <script src="js/sound.js"></script>
+    <script src="js/quizzes-ha2.js"></script>
+    <script src="js/lettre.js"></script>
+  </body>
+</html>
