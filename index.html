@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles/header-style.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="js/menu.js"></script>
+  </head>
+  <body>
+    <header class="top-wrapper">
+      <div class="header-card">
+        <!-- PARTIE HAUTE -->
+        <div class="header-top">
+          <a href="header.html"> <div class="logo-icon">📘</div></a>
+          <h1 class="site-title">Tifawt Académie</h1>
+
+          <div class="auth-buttons">
+            <a href="index.php" class="btn login">Connexion</a>
+            <a href="inscription.php" class="btn register">Inscription</a>
+          </div>
+        </div>
+
+        <!-- PARTIE BASSE -->
+        <nav class="header-nav">
+          <ul class="menu">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Cours ▾</a>
+              <ul class="submenu">
+                <li><a href="cours.html">Arabe</a></li>
+                <li><a href="#">Mathématiques</a></li>
+                <li><a href="#">Français</a></li>
+                <li><a href="#">Vidéos</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#">Histoires</a></li>
+            <li><a href="#">Vidéos</a></li>
+            <li><a href="espace.php">Espace Élève</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="content">
+      <div class="page-title">
+        <h1>Bienvenue à Tifawt Académie 🌟</h1>
+        <p>Apprends l’arabe en t’amusant !</p>
+      </div>
+      <section class="features">
+        <a href="cours.html" class="card card-cours">
+          <div class="icon">📘</div>
+          <h3>Cours</h3>
+          <p>Apprends l’arabe pas à pas avec des leçons simples.</p>
+          <span class="card-btn">Découvrir</span>
+        </a>
+
+        <a href="#" class="card card-histoires">
+          <div class="icon">📖</div>
+          <h3>Histoires</h3>
+          <p>Lis des histoires courtes pour améliorer ta compréhension.</p>
+          <span class="card-btn">Lire</span>
+        </a>
+
+        <a href="#" class="card card-quiz">
+          <span class="badge hot">Populaire</span>
+          <div class="icon">🧠</div>
+          <h3>Quiz</h3>
+          <p>Teste tes connaissances en t’amusant.</p>
+          <span class="card-btn">Jouer</span>
+        </a>
+      </section>
+    </main>
+  </body>
+</html>
