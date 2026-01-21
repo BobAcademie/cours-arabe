@@ -1,0 +1,71 @@
+/* TITRE DE PAGE */
+.page-title {
+  text-align: center;
+  margin: 30px 0 40px;
+}
+
+.page-title h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #123a5f;
+}
+
+.page-title p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* GRILLE DES NIVEAUX */
+.levels {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px 60px;
+}
+
+/* CARTE NIVEAU */
+.level-card {
+  text-decoration: none;
+  color: #123a5f;
+  background: white;
+  border-radius: 22px;
+  padding: 30px;
+  text-align: center;
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.level-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 45px rgba(0, 0, 0, 0.18);
+}
+
+.level-card h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.level-card span {
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* COULEURS PAR NIVEAU */
+.level-card.a1 {
+  background: linear-gradient(135deg, #e0f2ff, #cfe9ff);
+}
+
+.level-card.a2 {
+  background: linear-gradient(135deg, #e7ffe8, #c7f9cc);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .levels {
+    grid-template-columns: 1fr;
+  }
+}

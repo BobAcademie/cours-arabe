@@ -1,0 +1,1217 @@
+/* Styles généraux */
+body {
+  background: linear-gradient(to bottom, #fdf6ec, #e0f2ff);
+  font-family: "Segoe UI", sans-serif;
+  color: #123a5f;
+}
+
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+/* ================================
+    1. section de titre de la page 
+   ================================ */
+
+.lesson-badge {
+  background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+  padding: 30px 40px;
+  margin: 20px auto;
+  max-width: 1000px;
+  border-radius: 30px;
+  border-bottom: 5px solid #4da3ff; /* Petite barre décorative en bas */
+}
+
+.badge-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Les deux côtés prennent la même largeur pour que le centre reste au milieu */
+.badge-side {
+  flex: 1;
+}
+
+.side-fr {
+  text-align: left;
+}
+
+.side-ar {
+  text-align: right; /* Aligne l'arabe à droite */
+}
+
+.lesson-badge h1 {
+  margin: 10px 0 0 0;
+  color: #1e40af;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.arabic-subtitle {
+  color: #1e40af; /* Même couleur que le titre français comme demandé */
+  font-size: 32px; /* Un peu plus grand pour l'arabe */
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Style de l'image centrale */
+.badge-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 120px;
+}
+
+.badge-center img {
+  width: 100px;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 10px 15px rgba(77, 163, 255, 0.3));
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Responsive : sur téléphone, on empile les éléments */
+@media (max-width: 768px) {
+  .badge-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .side-ar {
+    text-align: center;
+  }
+}
+.badge-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.level-tag {
+  background: #eddb64;
+  color: rgb(34, 30, 30);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Animation de la lettre qui flotte */
+.badge-visual img {
+  width: 80px;
+  height: auto;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* Section lettre (impact visuel) */
+.letter-hero {
+  max-width: 1000px; /* On donne plus de largeur à la section */
+  margin: 30px auto;
+  text-align: center;
+}
+
+/* Le conteneur magique pour le ratio 16:9 */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Ratio 16:9 (9 / 16 = 0.5625) */
+  height: 0;
+  overflow: hidden;
+  border-radius: 25px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  border: 8px solid white;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+/* Boutons de liens rapides */
+.quick-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.btn-link {
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+
+.quiz-link {
+  background: linear-gradient(135deg, #ff9f45, #ff7e00);
+  box-shadow: 0 4px 0 #cc6600;
+}
+
+.download-link {
+  background: linear-gradient(135deg, #4da3ff, #1e40af);
+  box-shadow: 0 4px 0 #16327a;
+}
+
+.btn-link:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+}
+
+.btn-link:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+/* Sections */
+/* Style global pour toutes les sections de la page */
+section {
+  max-width: 900px; /* Largeur maximale pour ne pas être trop étiré */
+  margin: 40px auto; /* Centre la section et ajoute de l'espace haut/bas */
+  padding: 30px 20px; /* Espace interne */
+  background: #ffffff; /* Fond blanc différent du fond gris/bleu du body */
+  border-radius: 30px; /* Bords très arrondis pour le côté "enfant" */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Ombre très légère */
+}
+
+/* On peut varier légèrement le fond pour chaque type */
+.letter-syllables {
+  background: #fdfcf0;
+} /* Jaune très pâle */
+.letter-vocabulary {
+  background: #f0f7ff;
+} /* Bleu très pâle */
+#game-container section {
+  background: #ffffff;
+}
+
+/* Style pour les Syllabes */
+.syllables-grid {
+  display: grid;
+  /* Cela crée 5 colonnes de largeur égale */
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px; /* Espace entre les cartes */
+  justify-items: center; /* Centre les cartes horizontalement */
+  margin-top: 20px;
+}
+
+/* Version Mobile : on passe à 2 ou 3 colonnes pour que ce soit lisible */
+@media (max-width: 768px) {
+  .syllables-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.syllable-card {
+  background: white;
+  padding: 10px;
+  border-radius: 15px;
+  border: 2px solid #e2e8f0;
+  text-align: center;
+  width: 120px;
+}
+
+.syllable-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+/* L'animation de pulsation */
+@keyframes syllablePulse {
+  0% {
+    border-color: #f9ad56;
+    box-shadow: 0 0 0px rgba(77, 163, 255, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    border-color: #f9ad56;
+    box-shadow: 0 0 15px rgba(77, 163, 255, 0.6);
+    transform: scale(1.05);
+  }
+  100% {
+    border-color: #f9ad56;
+    box-shadow: 0 0 0px rgba(77, 163, 255, 0.4);
+    transform: scale(1);
+  }
+}
+
+/* La classe qui sera ajoutée par le JavaScript */
+.syllable-card.playing-now {
+  animation: syllablePulse 0.8s infinite;
+  border-color: #4da3ff !important;
+  z-index: 10; /* Pour passer au-dessus des autres cartes */
+}
+
+.play-btn-circle {
+  background: #4da3ff;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: transform 0.2s;
+}
+
+.play-btn-circle:hover {
+  transform: scale(1.1);
+}
+/* Animation de "bordure lumineuse" */
+@keyframes borderPulse {
+  0% {
+    border-color: #4da3ff;
+    box-shadow: 0 0 0px #4da3ff;
+  }
+  50% {
+    border-color: #4da3ff;
+    box-shadow: 0 0 20px #4da3ff;
+  }
+  100% {
+    border-color: #4da3ff;
+    box-shadow: 0 0 0px #4da3ff;
+  }
+}
+
+.playing-now {
+  animation: borderPulse 0.8s infinite;
+  transform: scale(1.02);
+  border-color: #4da3ff !important;
+}
+/* Style pour le Vocabulaire */
+
+/* Style de la phrase principale */
+.main-sentence-card {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* On centre les deux images dans la carte */
+  gap: 30px; /* Espace entre la phrase et l'illustration */
+  background: #fff;
+  padding: 25px;
+  border-radius: 30px;
+  border: 3px solid #4da3ff;
+  cursor: pointer;
+  max-width: 950px;
+  margin: 20px auto 40px auto;
+}
+
+/* Le bloc contenant le texte de la phrase */
+.sentence-text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 450px; /* Ta largeur pour l'image de la phrase */
+}
+
+.arabic-sentence {
+  font-size: 38px;
+  color: #1e40af;
+  margin: 0 0 10px 0;
+  line-height: 1.6;
+}
+
+/* L'image à droite */
+.sentence-img {
+  width: 250px; /* Ta dimension souhaitée */
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}
+/* Style spécifique pour l'image de la phrase Powerpoint */
+.phrase-as-img {
+  width: 100%; /* Elle prendra les 450px du parent */
+  height: auto;
+  margin-bottom: 10px;
+}
+/* L'illustration à droite */
+
+/* Animation au clic (on réutilise le principe précédent) */
+.main-sentence-card.playing-now {
+  animation: syllablePulse 0.8s infinite;
+}
+.audio-hint {
+  color: #4da3ff;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* Grille des mots découpés */
+.words-breakdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.word-item {
+  background: #f8faff;
+  border: 2px solid #e2e8f0;
+  padding: 15px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 120px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.word-item:hover {
+  background: #eef6ff;
+  border-color: #4da3ff;
+}
+
+/* Couleurs différentes pour bien distinguer */
+.word-ar {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1e40af;
+}
+.syllable-ar {
+  font-size: 32px;
+  color: #ff9f45;
+  margin: 5px 0;
+} /* Orange pour la syllabe focus */
+.word-ar.small {
+  font-size: 20px;
+  color: #64748b;
+}
+
+/* Grille de vocabulaire forcée à 4 colonnes */
+.vocab-grid {
+  display: grid;
+  /* On crée exactement 4 colonnes de taille égale */
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px; /* Espace entre les cartes */
+  padding: 10px;
+  width: 100%;
+  max-width: 1000px; /* Pour éviter que les cartes soient trop larges sur très grand écran */
+  margin: 0 auto;
+}
+
+.vocab-card {
+  flex: 1; /* Chaque carte prend la même largeur */
+  min-width: 150px; /* Largeur minimum pour ne pas être trop écrasé */
+  max-width: 200px; /* Largeur maximum */
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid #f1f5f9;
+  cursor: pointer;
+}
+
+/* Le conteneur d'image */
+.vocab-card .img-container {
+  height: 160px; /* Hauteur fixe comme avant */
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* On enlève le padding pour que l'image touche presque les bords */
+  overflow: hidden;
+}
+
+.vocab-card img {
+  width: 100%;
+  height: 100%;
+  /* 'cover' va remplir tout le carré. 
+       Si tes images Powerpoint ont déjà le mot inclus, 
+       utilise 'contain' mais avec un zoom (transform) */
+  object-fit: contain;
+  transform: scale(
+    1.1
+  ); /* Zoom léger pour supprimer les marges blanches de l'image */
+}
+
+/* Barre de son en bas de la carte */
+/* Info sous l'image */
+.card-info {
+  padding: 10px;
+  text-align: center;
+  background: #f8faff;
+  border-top: 1px solid #f1f5f9;
+}
+
+.audio-hint {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.vocab-card:hover {
+  border-color: #4da3ff;
+  transform: translateY(-5px);
+}
+
+.arabic-text {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1e40af;
+}
+
+/* Style de la carte */
+.vocab-card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid #f1f5f9;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+/* --- RESPONSIVE : Pour les tablettes et téléphones --- */
+@media (max-width: 900px) {
+  .vocab-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablette */
+  }
+}
+
+@media (max-width: 500px) {
+  .vocab-grid {
+    grid-template-columns: 1fr; /* 1 seule colonne sur petit téléphone */
+  }
+}
+/* Conteneur d'image optimisé pour Powerpoint */
+.vocab-card .img-container {
+  height: 180px; /* Hauteur confortable pour lire les mots dans l'image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 5px;
+}
+.vocab-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* L'image entière sera visible sans être coupée */
+}
+
+.vocab-card:hover {
+  transform: translateY(-10px);
+  border-color: #4da3ff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.arabic-word {
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+  color: #1f3c88;
+}
+/* Section mots avec Alif */
+
+.letter-words h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+
+.words-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.word-card {
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: #ffffff;
+  border: 3px solid #f1f5f9;
+}
+
+.word-card:hover {
+  transform: scale(1.08) rotate(2deg); /* La carte s'agrandit et penche un peu */
+  border-color: #4da3ff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.word-card .arabic {
+  font-size: 42px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.word-card .emoji {
+  font-size: 50px; /* Plus grand pour les enfants */
+  display: block;
+  margin-bottom: 10px;
+}
+/* Section jeu (préparée visuellement) */
+.letter-quiz {
+  text-align: center;
+  background: #ffffff;
+  padding: 35px 20px;
+  border-radius: 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.letter-quiz h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.letter-quiz p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.quiz-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.quiz-btn {
+  font-size: 24px;
+  padding: 14px 26px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #f1f5f9;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.quiz-btn:hover {
+  transform: scale(1.1);
+  background: #e0f2ff;
+}
+/* quiz js pour le jeu */
+.quiz-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.quiz-btn.correct {
+  background: #d1fae5;
+}
+
+.quiz-btn.wrong {
+  background: #fee2e2;
+}
+
+/*Bouton continuer */
+.next-step {
+  text-align: center;
+}
+
+/* le css de Drog Drop  */
+.letter-drag {
+  text-align: center;
+  background: #fff;
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.letters,
+.words {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px; /* Espace entre les mots */
+  margin-top: 20px;
+}
+
+.drag-letter,
+.drag-word {
+  padding: 12px 25px;
+  font-size: 24px;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.drag-letter.active {
+  background-color: #4da3ff !important; /* Bleu vif */
+  color: white !important; /* Lettre en blanc */
+  border-color: #1e40af !important;
+  transform: scale(1.1); /* S'agrandit légèrement */
+  box-shadow: 0 0 15px rgba(77, 163, 255, 0.6); /* Halo lumineux bleu */
+  animation: pulseActive 1.5s infinite; /* Pulsation douce */
+  z-index: 10;
+}
+
+/* État correct/erreur (déjà défini, mais on s'assure de l'alignement) */
+.drag-image.correct,
+.drag-word.correct {
+  border-color: #22c55e !important;
+  background: #f0fdf4 !important;
+  opacity: 0.7;
+  pointer-events: none; /* Désactive le clic une fois juste */
+}
+
+.drag-word.wrong {
+  background: #fecaca;
+}
+/* render quiz */
+.quiz-btn.active {
+  outline: 3px solid #60a5fa;
+}
+
+/* Responsive (obligatoire) */
+
+@media (max-width: 800px) {
+  .big-letter {
+    font-size: 120px;
+  }
+
+  .words-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.score-end {
+  text-align: center;
+  padding: 40px;
+}
+
+.replay-btn {
+  padding: 12px 26px;
+  border-radius: 25px;
+  border: none;
+  background: #4da3ff;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* css de Score */
+.result-card {
+  border: 3px solid #4da3ff;
+  animation: popIn 0.5s ease-out;
+}
+
+.final-emoji {
+  font-size: 50px;
+  margin: 10px 0;
+}
+
+.final-message {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1f3c88;
+  margin-bottom: 15px;
+}
+
+.final-score {
+  font-size: 20px;
+  background: #f0f9ff;
+  padding: 10px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* lettre puzzel */
+/* Conteneur principal identique aux autres jeux */
+.letter-puzzle-game {
+  text-align: center;
+  background: #fff;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* Ombre légère comme les autres */
+  margin-top: 20px;
+}
+
+/* Zone d'affichage du mot (le rectangle où les lettres s'affichent) */
+.word-display {
+  font-size: 48px;
+  min-height: 80px;
+  margin: 20px auto;
+  padding: 15px;
+  background: #f8fafc;
+  border: 2px dashed #4da3ff; /* Bordure pointillée bleue */
+  border-radius: 20px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  direction: rtl; /* Pour l'arabe */
+  color: #1f3c88;
+}
+
+/* Grille des boutons de lettres */
+.letters-grid {
+  display: flex;
+  flex-wrap: wrap; /* Pour que ça revienne à la ligne si besoin */
+  justify-content: center;
+  gap: 15px;
+  margin: 25px 0;
+  direction: rtl;
+}
+
+/* Style des boutons de lettres (basé sur .drag-letter) */
+.puzzle-letter-btn {
+  font-size: 32px;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 18px;
+  background: #f1f5f9; /* Même gris que le drag & drop */
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #123a5f;
+  box-shadow: 0 4px 0 #cbd5e1; /* Petit effet 3D */
+}
+
+.puzzle-letter-btn:hover {
+  background: #bae6fd; /* Bleu clair au survol */
+  transform: translateY(-2px);
+}
+
+.puzzle-letter-btn:active {
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+/* Zone des boutons d'action (Effacer / Suivant) */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Bouton Effacer */
+.reset-btn {
+  padding: 12px 24px;
+  border-radius: 25px;
+  border: 2px solid #ff9f45;
+  background: white;
+  color: #ff9f45;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.reset-btn:hover {
+  background: #fff7ed;
+}
+
+/* audio name quiz */
+
+.big-audio-btn {
+  background: linear-gradient(135deg, #4da3ff, #3b82f6);
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px auto;
+  box-shadow: 0 6px 0 #1e40af;
+  transition: all 0.1s;
+}
+
+.big-audio-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #1e40af;
+}
+
+.big-audio-btn .icon {
+  font-size: 30px;
+}
+
+.big-audio-btn.playing {
+  animation: pulse 0.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* l'animation des bouton fausse et vrais */
+/* L'animation de secousse */
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-8px);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+  75% {
+    transform: translateX(-8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* La classe qui déclenche l'animation */
+.wrong {
+  background-color: #fee2e2 !important; /* Rouge très clair */
+  border: 2px solid #ef4444 !important; /* Bordure rouge */
+  animation: shake 0.4s ease-in-out; /* Durée de 0.4 seconde */
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.correct {
+  background-color: #dcfce7 !important; /* Vert clair */
+  border: 2px solid #22c55e !important; /* Bordure verte */
+  animation: bounce 0.5s ease-out;
+  color: #166534 !important;
+}
+/* ============================================================
+   1. BOUTONS GLOBAUX (Suivant, Valider, Reset)
+   ============================================================ */
+
+/* On regroupe ce qui est commun pour éviter de se répéter */
+.next-btn,
+.validate-btn,
+.reset-btn {
+  padding: 15px 35px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin: 10px;
+}
+
+/* Style spécifique Suivant */
+.next-btn {
+  background: #4da3ff;
+  color: white;
+  box-shadow: 0 4px 0 #3b82f6; /* Effet 3D */
+}
+
+/* Style spécifique Valider */
+.validate-btn {
+  background: #22c55e;
+  color: white;
+  box-shadow: 0 4px 0 #166534;
+}
+
+/* Effet au survol pour tous les boutons actifs */
+.next-btn:hover:not(:disabled),
+.validate-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+/* État désactivé */
+.next-btn:disabled {
+  background: #cbd5e1;
+  color: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* ============================================================
+   2. SECTIONS DE JEU (Conteneurs)
+   ============================================================ */
+/* Ici tu mets le style du conteneur que je t'ai donné avant */
+#game-container section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+/* ============================================================
+.la section des éléments sections completer le mots 
+=============================================================== */
+.word-to-complete {
+  font-size: 40px; /* Très grand pour bien voir les détails des lettres */
+  font-weight: bold;
+  color: #1f3c88;
+  background: #fdf6ec; /* Un fond crème léger pour le faire ressortir */
+  padding: 20px;
+  border-radius: 20px;
+  margin: 15px auto 30px auto; /* 40px de marge en bas */
+  width: fit-content;
+  min-width: 250px;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.05); /* Effet de profondeur */
+  direction: rtl;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.forms-quiz-section .answers {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Espace constant entre tous les boutons de réponse */
+  margin-bottom: 20px; /* Espace avant le bouton Valider */
+}
+
+/* On s'assure que les boutons de formes sont assez grands */
+.form-option-btn {
+  font-size: 30px !important;
+  min-width: 100px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.word-to-complete {
+  transition: color 0.5s ease, transform 0.3s ease;
+}
+
+.word-to-complete.success-animate {
+  color: #22c55e;
+  transform: scale(1.1);
+}
+/* ============================================
+ la fonction de drag drop image 
+  ============================================= */
+/* Conteneur des images */
+.images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Espace entre les images */
+  margin-bottom: 30px;
+}
+/* Style de chaque bouton image */
+.drag-image {
+  width: 120px;
+  height: 120px;
+  padding: 10px;
+  background: white;
+  border: 3px solid #f1f5f9;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Pour que l'image ne dépasse pas */
+}
+.drag-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Garde les proportions de l'image sans l'écraser */
+}
+/* État quand on sélectionne l'image */
+.drag-image.active {
+  border-color: #4da3ff;
+  background: #eff6ff;
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(77, 163, 255, 0.2);
+}
+/* la phrase avec mot manquant */
+.sentence-to-complete {
+  font-size: 32px;
+  direction: rtl;
+  background: #f8faff;
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px dashed #4da3ff;
+  margin: 20px 0;
+  text-align: center;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+/* la fonction: trouver l'intrus */
+/* Conteneur pour aligner les cartes horizontalement */
+.odd-one-grid {
+  display: flex;
+  flex-wrap: wrap; /* Permet de passer à la ligne s'il y a beaucoup de mots */
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+/* Style de la carte horizontale */
+.odd-card-text {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 3px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 15px 25px;
+  min-width: 200px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.odd-card-text:hover {
+  border-color: #4da3ff;
+  transform: translateY(-3px);
+}
+
+/* L'icône audio à gauche du texte */
+.audio-trigger {
+  font-size: 24px;
+  margin-right: 15px; /* Espace entre l'icône et le mot arabe */
+  cursor: pointer;
+  filter: grayscale(1);
+  transition: transform 0.2s;
+}
+
+.audio-trigger:hover {
+  transform: scale(1.2);
+  filter: grayscale(0);
+}
+
+.arabic-word {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1e293b;
+  flex-grow: 1;
+  text-align: right; /* L'arabe s'aligne à droite */
+}
+
+/* États de validation */
+.odd-card-text.correct-intrus {
+  border-color: #22c55e;
+  background: #f0fdf4;
+}
+
+.odd-card-text.wrong-card {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+/* État quand on clique sur la carte (Avant validation) */
+.odd-card-text.active {
+  border-color: #4da3ff;
+  background-color: #f0f7ff;
+  box-shadow: 0 0 10px rgba(77, 163, 255, 0.3);
+  transform: scale(1.02); /* Un léger zoom pour l'effet de sélection */
+}
+
+/* On change aussi l'icône audio en bleu quand c'est sélectionné */
+.odd-card-text.active .audio-trigger {
+  filter: grayscale(0);
+  color: #4da3ff;
+}
+/* bouton vallider */
+.validate-btn:not(:disabled) {
+  background-color: #22c55e;
+  cursor: pointer;
+  animation: buttonPulse 1.5s infinite;
+}
+
+@keyframes buttonPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Le CSS pour un look "Puzzle Phrase" */
+.scramble-display {
+  min-height: 80px;
+  background: #f8fafc;
+  border: 3px dashed #cbd5e1;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  padding: 20px;
+  margin: 20px 0;
+  direction: rtl; /* Important pour l'arabe */
+}
+
+.scramble-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.word-chip {
+  padding: 10px 20px !important;
+  font-size: 24px !important;
+  border-radius: 50px !important; /* Forme de pillule */
+  background: white;
+  border: 2px solid #4da3ff;
+}
+
+.placeholder {
+  color: #94a3b8;
+  font-size: 18px;
+  font-style: italic;
+}

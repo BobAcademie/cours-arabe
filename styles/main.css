@@ -1,0 +1,142 @@
+/* ===== CONTENU PRINCIPAL ===== */
+
+.content {
+  max-width: 1200px;
+  margin: auto;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* ===== SECTION Titel ===== */
+.page-title {
+  text-align: center;
+}
+
+.page-title h1 {
+  font-size: 32px;
+  color: #123a5f;
+}
+
+.page-title p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* ===== CARTES ACCUEIL ===== */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.card {
+  display: block;
+  text-decoration: none;
+  color: #123a5f;
+
+  border-radius: 22px;
+  padding: 32px;
+  text-align: center;
+
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 28px 45px rgba(0, 0, 0, 0.18);
+}
+.card:hover .icon {
+  transform: scale(1.15);
+}
+
+.card .icon {
+  font-size: 52px;
+  margin-bottom: 18px;
+  transition: transform 0.3s ease;
+}
+.card-cours {
+  background: linear-gradient(135deg, #e0f2ff, #b9e6ff);
+}
+
+.card-histoires {
+  background: linear-gradient(135deg, #fff0d9, #ffd8a8);
+}
+
+.card-quiz {
+  background: linear-gradient(135deg, #e7ffe8, #b9fbc0);
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.card-btn {
+  display: inline-block;
+  padding: 10px 26px;
+  border-radius: 30px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.9);
+  color: #123a5f;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.card:hover .card-btn {
+  transform: scale(1.05);
+  background: white;
+}
+
+.card {
+  position: relative; /* obligatoire pour le badge */
+}
+
+/* STYLE GÉNÉRAL pour le badge */
+.badge {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+/* BADGE POPULAIRE */
+.badge.hot {
+  background: #f59e0b;
+}
+
+/* RESPONSIVE (très important) */
+@media (max-width: 900px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*  fonction word to complete */
+.word-to-complete {
+  font-size: 64px;
+  font-weight: bold;
+  margin: 30px 0;
+  padding: 20px;
+  background: #fdf6ec;
+  border-radius: 15px;
+  color: #1f3c88;
+  letter-spacing: 5px;
+}
+
+.form-option-btn {
+  font-size: 40px !important; /* On force une taille plus grande pour les lettres arabes */
+  min-width: 80px;
+}

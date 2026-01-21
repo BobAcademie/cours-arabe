@@ -1,0 +1,176 @@
+body {
+  background: linear-gradient(180deg, #f5fbff, #fef6ec);
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* ===== CARTE ===== */
+.header-card {
+  width: 100%;
+  margin: auto;
+  background: #4da3ff;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  overflow: visible;
+}
+
+/* ===== PARTIE HAUTE ===== */
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #dff1ff, #b8e6ff);
+}
+
+.logo-img {
+  height: 60px; /* Ajuste selon la hauteur de ton header */
+  width: auto;
+  margin-right: 10px;
+  /* Optionnel : ajoute un petit effet de flottement léger au survol */
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: rotate(-5deg) scale(1.1);
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Enlève le soulignement */
+  color: inherit; /* Garde la couleur d'origine du texte */
+  gap: 15px; /* Espace entre l'icône et le texte */
+  transition: transform 0.2s ease; /* Petit bonus : léger effet au survol */
+}
+
+.logo-link:hover {
+  transform: scale(1.02); /* Très léger agrandissement au survol */
+}
+
+/* On s'assure que le titre ne change pas de couleur */
+.site-title {
+  margin: 0;
+  color: #1e40af; /* Ta couleur bleue habituelle */
+  text-decoration: none;
+  margin-right: 120px;
+}
+
+/* ===== BOUTONS AUTH ===== */
+.auth-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.login {
+  color: #4da3ff;
+  border: 2px solid #4da3ff;
+}
+
+.login:hover {
+  background: #4da3ff;
+  color: white;
+}
+
+.register {
+  background: #ff9f45;
+  color: white;
+}
+
+.register:hover {
+  background: #f58b2a;
+}
+
+/* ===== MENU ===== */
+.header-nav {
+  padding: 8px 12px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 26px;
+  font-weight: 600;
+  color: #1f3c88;
+}
+
+.menu a:hover {
+  color: #ff9f45;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown {
+  position: relative;
+}
+
+.submenu {
+  display: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff4dc;
+  list-style: none;
+  width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+.submenu a {
+  display: block;
+  padding: 12px 18px;
+  font-size: 18px;
+}
+
+.submenu a:hover {
+  background: #ffe1b3;
+}
+
+/* submenu visible */
+.dropdown.active .submenu {
+  display: block;
+}
+
+/* curseur */
+.dropdown-toggle {
+  cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 850px) {
+  .header-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .site-title {
+    font-size: 28px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .submenu {
+    position: static;
+    box-shadow: none;
+  }
+}
