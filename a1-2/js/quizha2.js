@@ -21,14 +21,14 @@ const oddOneOutData = {
   "nature-1": {
     instruction: "ماذا يَفْعَلُ الْحِمارُ ؟   ",
     options: [
-      { text: "فَرِحٌ", audio: "../sounds/haa2/content.mp3", correct: false }, // Pomme
-      { text: "حَقِيبَةٌ", audio: "../sounds/haa2/valise.mp3", correct: false }, // Banane
+      { text: "فَرِحٌ", audio: "../sounds/haa2/content.MP3", correct: false }, // Pomme
+      { text: "حَقِيبَةٌ", audio: "../sounds/haa2/valise.MP3", correct: false }, // Banane
       {
         text: "يَجْري",
-        audio: "../sounds/haa2/courir.mp3",
+        audio: "../sounds/haa2/courir.MP3",
         correct: true,
       }, // Orange
-      { text: "تُفَّاحٌ", audio: "../sounds/haa2/pomme.mp3", correct: false }, // Stylo (L'intrus)
+      { text: "تُفَّاحٌ", audio: "../sounds/haa2/pomme.MP3", correct: false }, // Stylo (L'intrus)
     ],
   },
 };
@@ -61,7 +61,7 @@ const audioQuizData = {
   "alif-audio-1": {
     instruction: "Écoute bien et choisis le mot correspondant",
     // Ici, tu mets le chemin exact à partir de la racine de ton projet
-    audioPath: "../sounds/haa2/piscine.mp3",
+    audioPath: "../sounds/haa2/piscine.MP3",
     options: [
       { text: "حَمامَةٌ", correct: false },
       { text: "مَسْبَحٌ", correct: true },
@@ -71,7 +71,7 @@ const audioQuizData = {
   "pomme-audio": {
     instruction: "Écoute bien et choisis le mot correspondant",
     // Ici, tu peux viser un sous-dossier sans problème !
-    audioPath: "../sounds/haa2/valise.mp3",
+    audioPath: "../sounds/haa2/valise.MP3",
     options: [
       { text: "حَقيبَةٌ", correct: true },
       { text: "حِصانٌ", correct: false },
@@ -82,7 +82,7 @@ const audioQuizData = {
 
 const puzzleData = {
   "alif-puzzle-1": {
-    instruction: "Reconstitue le mot Lion (Asad)",
+    instruction: "Reconstitue le mot Lait (Halib)",
     // Ne tapez pas le mot au clavier, faites : letters[1] + letters[2] + letters[0]
     word: "حَــلِــيــبٌ",
     letters: ["حَـ", "ـبٌ", "ـلِـ", "ـيـ"],
@@ -124,9 +124,9 @@ const imageDragData = {
   fruits: {
     instruction: "Associe l’image au mot",
     images: [
-      { id: "valise", src: "../img/pomme-audio/valise.JPG" },
-      { id: "pomme", src: "../img/pomme-audio/pomme.JPG" },
-      { id: "pigeon", src: "../img/pomme-audio/pigeon.JPG" },
+      { id: "valise", src: "../img/pomme-audio/valise.jpg" },
+      { id: "pomme", src: "../img/pomme-audio/pomme.jpg" },
+      { id: "pigeon", src: "../img/pomme-audio/pigeon.jpg" },
     ],
     words: [
       { word: "تُفَّاحٌ", match: "pomme" },
@@ -135,3 +135,4 @@ const imageDragData = {
     ],
   },
 };
+
