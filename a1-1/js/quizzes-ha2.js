@@ -23,7 +23,7 @@ const formsQuizData = {
 const audioQuizData = {
   "alif-audio-1": {
     instruction: "Écoute bien et choisis le mot correspondant",
-    audioPath: "../sounds/haa2/magicien.mp3", // Le nom de votre fichier dans le dossier sounds
+    audioPath: "../sounds/haa2/magicien.MP3", // Le nom de votre fichier dans le dossier sounds
     options: [
       { text: "حمامة", correct: false },
       { text: "حليب", correct: false },
@@ -87,3 +87,4 @@ const imageDragData = {
     ],
   },
 };
+
