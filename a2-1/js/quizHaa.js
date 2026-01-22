@@ -21,10 +21,10 @@ const oddOneOutData = {
   "nature-1": {
     instruction: "ماذا تُعْطينا الدَّجَاجَةُ",
     options: [
-      { text: "فَرِحٌ", audio: "../sounds/haa2/content.mp3", correct: false }, // Pomme
-      { text: "حَمامَةٌ", audio: "../sounds/haa2/pigeon.mp3", correct: false }, // Banane
-      { text: "مَسْبَحٌ", audio: "../sounds/haa2/piscine.mp3", correct: false }, // Orange
-      { text: "بَيْضًا", audio: "../sounds/haa2/oeufs.mp3", correct: true }, // Stylo (L'intrus)
+      { text: "فَرِحٌ", audio: "../sounds/haa2/content.MP3", correct: false }, // Pomme
+      { text: "حَمامَةٌ", audio: "../sounds/haa2/pigeon.MP3", correct: false }, // Banane
+      { text: "مَسْبَحٌ", audio: "../sounds/haa2/piscine.MP3", correct: false }, // Orange
+      { text: "بَيْضًا", audio: "../sounds/haa2/oeufs.MP3", correct: true }, // Stylo (L'intrus)
     ],
   },
 };
@@ -66,7 +66,7 @@ const sentenceQuizData = {
 const audioQuizData = {
   "alif-audio-1": {
     instruction: "Écoute bien et choisis le mot correspondant",
-    audioPath: "../sounds/haa2/abeille.mp3", // Le nom de votre fichier dans le dossier sounds
+    audioPath: "../sounds/haa2/abeille.MP3", // Le nom de votre fichier dans le dossier sounds
     options: [
       { text: "نَحْلَةٌ", correct: true },
       { text: "بَاب", correct: false },
@@ -119,9 +119,9 @@ const imageDragData = {
   fruits: {
     instruction: "Associe l’image au mot",
     images: [
-      { id: "valise", src: "../img/pomme-audio/valise.JPG" },
-      { id: "pomme", src: "../img/pomme-audio/pomme.JPG" },
-      { id: "pigeon", src: "../img/pomme-audio/pigeon.JPG" },
+      { id: "valise", src: "../img/lettre-ha2/valise.jpg" },
+      { id: "pomme", src: "../img/lettre-ha2/pomme.jpg" },
+      { id: "pigeon", src: "../img/lettre-ha2/pigeon.jpg" },
     ],
     words: [
       { word: "تُفَّاحٌ", match: "pomme" },
@@ -130,3 +130,4 @@ const imageDragData = {
     ],
   },
 };
+
