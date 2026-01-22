@@ -1,11 +1,11 @@
 const games = [
+  { type: "audio-quiz", key: "alif-audio-1" },
   { type: "quiz", key: "alif-quiz-1" },
   { type: "quiz", key: "alif-quiz-2" },
   { type: "forms-quiz", key: "alif-forms-1" },
   { type: "puzzle", key: "alif-puzzle-1" },
   { type: "drag", key: "alif-drag-1" },
   { type: "image-drag", key: "fruits" },
-  { type: "audio-quiz", key: "alif-audio-1" },
 ];
 
 const formsQuizData = {
@@ -34,7 +34,7 @@ const audioQuizData = {
 
 const puzzleData = {
   "alif-puzzle-1": {
-    instruction: "Reconstitue le mot Lion (Asad)",
+    instruction: "Reconstitue le mot Pigeon (Hamama)",
     // Ne tapez pas le mot au clavier, faites : letters[1] + letters[2] + letters[0]
     word: "حَــمـامَــةٌ",
     letters: ["مَـ", "ـمـا", "حَـ", "ـةٌ"],
@@ -87,4 +87,5 @@ const imageDragData = {
     ],
   },
 };
+
 
