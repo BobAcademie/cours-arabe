@@ -1072,7 +1072,119 @@ section {
   transform: scale(1.05);
   box-shadow: 0 5px 15px rgba(77, 163, 255, 0.2);
 }
+/* la phrase avec mot manquant */
+.sentence-to-complete {
+  font-size: 32px;
+  direction: rtl;
+  background: #f8faff;
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px dashed #4da3ff;
+  margin: 20px 0;
+  text-align: center;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+/* la fonction: trouver l'intrus */
+/* Conteneur pour aligner les cartes horizontalement */
+.odd-one-grid {
+  display: flex;
+  flex-wrap: wrap; /* Permet de passer à la ligne s'il y a beaucoup de mots */
+  justify-content: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+/* Style de la carte horizontale */
+.odd-card-text {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 3px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 15px 25px;
+  min-width: 200px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.odd-card-text:hover {
+  border-color: #4da3ff;
+  transform: translateY(-3px);
+}
+
+/* L'icône audio à gauche du texte */
+.audio-trigger {
+  font-size: 24px;
+  margin-right: 15px; /* Espace entre l'icône et le mot arabe */
+  cursor: pointer;
+  filter: grayscale(1);
+  transition: transform 0.2s;
+}
+
+.audio-trigger:hover {
+  transform: scale(1.2);
+  filter: grayscale(0);
+}
+
+.arabic-word {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1e293b;
+  flex-grow: 1;
+  text-align: right; /* L'arabe s'aligne à droite */
+}
+
+/* États de validation */
+.odd-card-text.correct-intrus {
+  border-color: #22c55e;
+  background: #f0fdf4;
+}
+
+.odd-card-text.wrong-card {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+/* État quand on clique sur la carte (Avant validation) */
+.odd-card-text.active {
+  border-color: #4da3ff;
+  background-color: #f0f7ff;
+  box-shadow: 0 0 10px rgba(77, 163, 255, 0.3);
+  transform: scale(1.02); /* Un léger zoom pour l'effet de sélection */
+}
+
+/* On change aussi l'icône audio en bleu quand c'est sélectionné */
+.odd-card-text.active .audio-trigger {
+  filter: grayscale(0);
+  color: #4da3ff;
+}
+/* bouton vallider */
+.validate-btn:not(:disabled) {
+  background-color: #22c55e;
+  cursor: pointer;
+  animation: buttonPulse 1.5s infinite;
+}
+
+@keyframes buttonPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /* Le CSS pour un look "Puzzle Phrase" */
 .scramble-display {
   min-height: 80px;
@@ -1109,7 +1221,6 @@ section {
   font-size: 18px;
   font-style: italic;
 }
-
 /* ======================
  La barre de progression
  ======================== */
@@ -1143,3 +1254,4 @@ section {
   transition: width 0.5s ease-out; /* Animation fluide quand la barre avance */
   border-radius: 10px;
 }
+
