@@ -174,3 +174,55 @@ body {
     box-shadow: none;
   }
 }
+/* --- ADAPTATION MOBILE --- */
+@media (max-width: 600px) {
+    #game-container {
+        padding: 10px;
+        width: 95%; /* On utilise plus d'espace sur les bords */
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Titre moins gros */
+    }
+
+    /* Grilles d'options (Intrus, Scramble, etc.) */
+    .odd-one-grid, .scramble-options {
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 colonnes au lieu de 4 */
+        gap: 10px;
+    }
+
+    /* Les cartes de mots (Scramble et Intrus) */
+    .odd-card-text, .word-chip {
+        min-width: unset; /* Annule la largeur fixe */
+        width: 100%;      /* Prend toute la place de la colonne */
+        padding: 10px;
+        font-size: 18px !important; /* Texte lisible mais pas énorme */
+    }
+
+    /* La zone où on construit la phrase (Scramble) */
+    .scramble-display {
+        font-size: 20px;
+        min-height: 60px;
+        padding: 10px;
+    }
+
+    /* Les boutons d'action (Valider, Suivant) */
+    .actions {
+        display: flex;
+        flex-direction: column; /* Boutons l'un sur l'autre pour cliquer plus facilement */
+        gap: 10px;
+    }
+
+    .validate-btn, .next-btn, .reset-btn {
+        width: 100%; /* Boutons larges pour le pouce */
+        height: 50px;
+        font-size: 18px;
+    }
+
+    /* Barre de progression */
+    .progress-wrapper {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
