@@ -427,8 +427,13 @@ section {
 
 .words-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  /* - auto-fit : remplit la ligne automatiquement 
+     - minmax(140px, 1fr) : chaque carte fait au moins 140px, 
+       sinon elle passe à la ligne suivante 
+  */
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  padding: 10px;
 }
 
 .word-card {
@@ -436,6 +441,9 @@ section {
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   background: #ffffff;
   border: 3px solid #f1f5f9;
+  border-radius: 15px; /* Ajout d'arrondis pour le look mobile */
+  padding: 15px;      /* Pour donner de l'air au contenu */
+  text-align: center;
 }
 
 .word-card:hover {
@@ -454,6 +462,15 @@ section {
   font-size: 50px; /* Plus grand pour les enfants */
   display: block;
   margin-bottom: 10px;
+}
+/* On ajuste la taille pour mobile spécifiquement */
+@media (max-width: 480px) {
+  .word-card .arabic {
+    font-size: 32px; /* Un peu plus petit pour éviter de déborder */
+  }
+  .word-card .emoji {
+    font-size: 40px;
+  }
 }
 /* Section jeu (préparée visuellement) */
 .letter-quiz {
@@ -982,3 +999,4 @@ section {
   transition: width 0.5s ease-out; /* Animation fluide quand la barre avance */
   border-radius: 10px;
 }
+
