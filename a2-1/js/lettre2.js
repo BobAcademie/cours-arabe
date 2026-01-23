@@ -35,7 +35,8 @@ const container = document.getElementById("game-container");
 // ================================
 function loadNextGame() {
   container.innerHTML = "";
-
+  // Appel de la barre ici !
+  updateProgressBar();
   // 🎉 fin de la leçon
   // 🎉 FIN DE LA LEÇON
   if (currentGameIndex >= games.length) {
@@ -1091,8 +1092,35 @@ function renderSentenceScramble(data) {
   });
 }
 // ================================
+// Barre de progression
+// ================================
+function updateProgressBar() {
+  const progressFill = document.getElementById("progress-fill");
+  const progressText = document.getElementById("progress-text");
+  const progressPercentage = document.getElementById("progress-percentage");
+
+  // Calcul du progrès (currentGameIndex + 1 car l'index commence à 0)
+  const totalGames = games.length;
+  const currentStep = currentGameIndex + 1;
+
+  // Si on a fini tous les jeux, on met à 100%
+  const percent = (currentGameIndex / totalGames) * 100;
+  const displayPercent = Math.round((currentGameIndex / totalGames) * 100);
+
+  progressFill.style.width = `${displayPercent}%`;
+
+  if (currentGameIndex < totalGames) {
+    progressText.textContent = `Exercice ${currentStep} / ${totalGames}`;
+    progressPercentage.textContent = `${displayPercent}%`;
+  } else {
+    progressText.textContent = "Leçon terminée !";
+    progressPercentage.textContent = "100%";
+  }
+}
+// ================================
 // 🚀 DÉMARRAGE
 // ================================
 document.addEventListener("DOMContentLoaded", () => {
   loadNextGame();
 });
+
