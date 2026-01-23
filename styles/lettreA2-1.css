@@ -1255,4 +1255,70 @@ section {
   border-radius: 10px;
 }
 
+/* section de telechargement */ 
+.download-section {
+  padding: 30px 15px;
+  background-color: #f0f9ff; /* Bleu très clair */
+  border-radius: 20px;
+  margin: 40px auto;
+  max-width: 600px;
+  border: 2px dashed #4da3ff;
+}
+
+.download-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Important pour le mobile */
+  justify-content: center;
+  text-align: left;
+}
+
+.download-icon {
+  font-size: 50px;
+}
+
+.download-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.download-info h3 {
+  margin: 0 0 5px 0;
+  color: #1e293b;
+}
+
+.download-info p {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+.download-btn {
+  background-color: #22c55e; /* Vert "Succès" */
+  color: white;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(34, 197, 94, 0.3);
+}
+
+.download-btn:hover {
+  background-color: #16a34a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(34, 197, 94, 0.4);
+}
+
+/* Ajustement mobile */
+@media (max-width: 480px) {
+  .download-card {
+    text-align: center;
+    flex-direction: column;
+  }
+  .download-btn {
+    width: 100%;
+  }
+}
 
