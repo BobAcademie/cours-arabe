@@ -463,6 +463,10 @@ section {
   display: block;
   margin-bottom: 10px;
 }
+.word-card:active {
+  transform: scale(0.95); /* La carte s'enfonce légèrement sous le doigt */
+  background-color: #f0f9ff;
+}
 /* On ajuste la taille pour mobile spécifiquement */
 @media (max-width: 480px) {
   .word-card .arabic {
@@ -999,4 +1003,5 @@ section {
   transition: width 0.5s ease-out; /* Animation fluide quand la barre avance */
   border-radius: 10px;
 }
+
 
