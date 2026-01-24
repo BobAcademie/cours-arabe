@@ -1078,6 +1078,47 @@ section {
     width: 100%;
   }
 }
+/* ajuster les boutons */
+.download-btn,
+.btn-link {
+    display: inline-flex;    /* Permet de centrer le contenu facilement */
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;        /* Force une largeur minimale identique pour tous */
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;   /* Enlève le soulignement des liens <a> */
+    transition: all 0.3s ease;
+    margin: 10px;
+    box-sizing: border-box;  /* Pour que le padding ne dépasse pas */
+}
+@media (max-width: 480px) {
+    /* On force tous les boutons d'action à prendre 100% de la largeur dispo */
+    .next-btn, 
+    .validate-btn, 
+    .download-btn,
+    .btn-link,
+    .reset-btn {
+        width: 100%;        /* Ils feront tous la même taille */
+        min-width: unset;   /* On enlève la limite minimum */
+        margin: 5px 0;      /* On réduit un peu l'espace entre eux */
+        display: flex;
+    }
+
+    /* Optionnel : centrer les conteneurs de boutons */
+    .next-step, .actions, .quick-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
 
 
 
