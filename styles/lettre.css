@@ -1079,6 +1079,9 @@ section {
   }
 }
 /* ajuster les boutons */
+/* On cible à la fois les boutons ET les liens transformés en boutons */
+.next-btn,
+.validate-btn,
 .download-btn,
 .btn-link {
     display: inline-flex;    /* Permet de centrer le contenu facilement */
@@ -1118,6 +1121,7 @@ section {
         padding: 0 10px;
     }
 }
+
 
 
 
