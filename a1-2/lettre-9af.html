@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="../styles/header-style.css" />
+    <link rel="stylesheet" href="../styles/lattreA1-2.css" />
+    <script src="../js/menu.js"></script>
+  </head>
+  <body>
+    <header class="top-wrapper">
+      <div class="header-card">
+        <!-- PARTIE HAUTE -->
+        <div class="header-top">
+          <a href="../index.html" class="logo-link">
+            <img
+              src="../img/logo-tifawt.png"
+              alt="Logo Tifawt Académie"
+              class="logo-img"
+            />
+            <h1 class="site-title">Tifawt Académie</h1>
+          </a>
+
+          <div class="auth-buttons">
+            <a href="index.php" class="btn login">Connexion</a>
+            <a href="inscription.php" class="btn register">Inscription</a>
+          </div>
+        </div>
+
+        <!-- PARTIE BASSE -->
+        <nav class="header-nav">
+          <ul class="menu">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Cours ▾</a>
+              <ul class="submenu">
+                <li><a href="#">Arabe</a></li>
+                <li><a href="#">Mathématiques</a></li>
+                <li><a href="#">Français</a></li>
+                <li><a href="#">Vidéos</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#">Histoires</a></li>
+            <li><a href="#">Vidéos</a></li>
+            <li><a href="espace.php">Espace Élève</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Section Titre de la leçon -->
+    <section class="lesson-badge">
+      <div class="badge-container">
+        <div class="badge-side side-fr">
+          <span class="level-tag">Niveau: A1-2</span>
+          <h1>Leçon : La lettre 9af</h1>
+        </div>
+
+        <div class="badge-center">
+          <img
+            src="../img/lettre-9af/qaf.jpg"
+            alt="Lettre Sine"
+            class="floating-letter"
+          />
+        </div>
+
+        <div class="badge-side side-ar">
+          <h2 class="arabic-subtitle">درس : حرف القاف</h2>
+        </div>
+      </div>
+    </section>
+    <!-- section lettre -->
+    <section class="letter-hero">
+      <div class="video-container">
+        <iframe
+          src="https://www.youtube.com/embed/FSBiJDy8UOU?si=GJR0Gh7CNNXU3UT8"
+          title="YouTube video player"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="quick-links">
+        <a href="#game-container" class="btn-link quiz-link">
+          <span class="icon">🎮</span> Commencer le Quiz
+        </a>
+        <a href="#download-container" class="btn-link download-link">
+          <span class="icon">📄</span> Télécharger la Fiche (PDF)
+        </a>
+      </div>
+    </section>
+    <!-- SECTION : ÉCOUTER LE SON 🔊 -->
+    <section class="sentence-learning">
+      <h2>Je lis ma première phrase</h2>
+
+      <div
+        class="main-sentence-card"
+        onclick="playCustomSound('../sounds/9af/phrase.MP3', this)"
+      >
+        <div class="sentence-text-block">
+          <img
+            src="../img/lettre-9af/phrase.png"
+            alt="Phrase Arabe"
+            class="phrase-as-img"
+          />
+          <span class="audio-hint">Écouter la phrase entière 🔊</span>
+        </div>
+
+        <img
+          src="../img/lettre-9af/image-text.png"
+          alt="Dina et sa poupée"
+          class="sentence-img"
+        />
+      </div>
+
+      <div class="words-breakdown"></div>
+    </section>
+    <!-- 3️⃣ SECTION : MOTS SIMPLES AVEC Dal -->
+    <section class="letter-vocabulary">
+      <h2>Je découvre les mots</h2>
+      <div class="vocab-grid">
+        <div
+          class="vocab-card"
+          onclick="playCustomSound('../sounds/9af/9an.MP3', this)"
+        >
+          <div class="img-container">
+            <img src="../img/lettre-9af/9an.png" alt="Lion" />
+          </div>
+          <div class="card-info">
+            <span class="audio-hint">Écouter 🔊</span>
+          </div>
+        </div>
+
+        <div
+          class="vocab-card"
+          onclick="playCustomSound('../sounds/9af/9on.MP3', this)"
+        >
+          <div class="img-container">
+            <img src="../img/lettre-9af/9on.png" alt="Lapin" />
+          </div>
+          <div class="card-info">
+            <span class="audio-hint">Écouter 🔊</span>
+          </div>
+        </div>
+        <div
+          class="vocab-card"
+          onclick="playCustomSound('../sounds/9af/9aa.MP3', this)"
+        >
+          <div class="img-container">
+            <img src="../img/lettre-9af/9aa.png" alt="Lapin" />
+          </div>
+          <div class="card-info">
+            <span class="audio-hint">Écouter 🔊</span>
+          </div>
+        </div>
+
+        <div
+          class="vocab-card"
+          onclick="playCustomSound('../sounds/9af/9in.MP3', this)"
+        >
+          <div class="img-container">
+            <img src="../img/lettre-9af/9in.png" alt="Carafe" />
+          </div>
+          <div class="card-info">
+            <span class="audio-hint">Écouter 🔊</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 3️⃣ SECTION : Syllabes SIMPLES AVEC Dal -->
+    <section class="letter-vocabulary">
+      <h2>Je découvre les mots</h2>
+      <div class="vocab-grid">
+        <div
+          class="vocab-card"
+          onclick="playCustomSound('../sounds/9af/9anttara.MP3', this)"
+        >
+          <div class="img-container">
+            <img src="../img/lettre-9af/9anttara.png" alt="Lapin" />
+          </div>
+          <div class="card-info">
+            <span class="audio-hint">Écouter 🔊</span>
+          </div>
+        </div>
+        <div
+          class="vocab-card"
+          onclick="playCustomSound('../sounds/9af/9ism.MP3', this)"
+        >
+          <div class="img-container">
+            <img src="../img/lettre-9af/9ism.png" alt="Lapin" />
+          </div>
+          <div class="card-info">
+            <span class="audio-hint">Écouter 🔊</span>
+          </div>
+        </div>
+        <div
+          class="vocab-card"
+          onclick="playCustomSound('../sounds/9af/9ofl.MP3', this)"
+        >
+          <div class="img-container">
+            <img src="../img/lettre-9af/9ofl.png" alt="Lapin" />
+          </div>
+          <div class="card-info">
+            <span class="audio-hint">Écouter 🔊</span>
+          </div>
+        </div>
+
+        <div
+          class="vocab-card"
+          onclick="playCustomSound('../sounds/9af/mil3a9a.MP3', this)"
+        >
+          <div class="img-container">
+            <img src="../img/lettre-9af/mil3a9a.png" alt="Maman" />
+          </div>
+          <div class="card-info">
+            <span class="audio-hint">Écouter 🔊</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="progress-container">
+      <div class="progress-header">
+        <span id="progress-text">Exercice 1 / 10</span>
+        <span id="progress-percentage">0%</span>
+      </div>
+      <div class="progress-bar-bg">
+        <div id="progress-fill"></div>
+      </div>
+    </div>
+    <!-- 4️⃣ SECTION : MINI ACTIVITÉ (TRÈS IMPORTANT) -->
+    <section id="game-container"></section>
+    <!-- SECTION de telechargement-->
+    <section id^="download-container" class="download-section">
+      <div class="download-card">
+        <div class="download-icon">📄</div>
+        <div class="download-info">
+          <h3>Fiche Récapitulative - La Lettre Haa (ح)</h3>
+          <p>
+            Télécharge la fiche d'exercices et de lecture pour t'entraîner à la
+            maison.
+          </p>
+        </div>
+        <a
+          href="../fiches/A1-2/حرف الحاء A1-2.pdf"
+          download
+          class="download-btn"
+        >
+          📥 Télécharger le PDF
+        </a>
+      </div>
+    </section>
+
+    <!-- SECTION : CONTINUER ➡️ -->
+    <section class="next-step">
+      <a href="ba.html" class="next-btn">➡️ Lettre suivante : Ba</a>
+    </section>
+    <script src="../js/sound.js"></script>
+    <script src="js/quiz9af.js"></script>
+    <script src="js/lettre2.js"></script>
+  </body>
+</html>
