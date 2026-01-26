@@ -356,18 +356,12 @@ section {
 .vocab-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Remplit bien la carte sans déformer */
+  object-fit: contain; /* <--- Change ici : 'contain' au lieu de 'cover' */
+  background-color: #fff; /* Optionnel: assure un fond blanc si l'image est petite */
 }
 
 
-  /* 'cover' va remplir tout le carré. 
-       Si tes images Powerpoint ont déjà le mot inclus, 
-       utilise 'contain' mais avec un zoom (transform) */
-  object-fit: contain;
-  transform: scale(
-    1.1
-  ); /* Zoom léger pour supprimer les marges blanches de l'image */
-}
+ 
 
 /* Barre de son en bas de la carte */
 .card-info {
@@ -1121,6 +1115,7 @@ section {
         padding: 0 10px;
     }
 }
+
 
 
 
