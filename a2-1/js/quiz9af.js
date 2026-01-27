@@ -98,7 +98,7 @@ const sentenceQuizData = {
 const audioQuizData = {
   "alif-audio-1": {
     instruction: "Écoute bien et choisis le mot correspondant",
-    audioPath: "../sounds/9af/ba99alon.mp3", // Le nom de votre fichier dans le dossier sounds
+    audioPath: "../sounds/9af/ba99alon.MP3", // Le nom de votre fichier dans le dossier sounds
     options: [
       { text: "قَارِبٌ", correct: false },
       { text: "بَقَّالٌ", correct: true },
@@ -162,3 +162,4 @@ const imageDragData = {
     ],
   },
 };
+
