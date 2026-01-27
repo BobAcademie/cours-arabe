@@ -14,7 +14,7 @@ const scrambleData = {
   "scramble-1": {
     instruction: "Remets les mots dans le bon ordre pour former la phrase :",
     correctSentence: "يَضَعُ قَاسِمُ الْأَقْلامَ فِي الْمِقْلَمَةِ",
-    words: ["فِي", "يَضَعُ", "قَاسِمُ", "الْأَقْلامَ", "الْمِقْلَمَةِ"], // Les mots individuels
+    words: ["يَضَعُ", "قَاسِمُ", "الْأَقْلامَ", "فِي الْمِقْلَمَةِ"], // Les mots individuels
   },
 };
 
@@ -135,3 +135,4 @@ const imageDragData = {
     ],
   },
 };
+
