@@ -235,7 +235,12 @@ section {
 /* Version Mobile : on passe à 2 ou 3 colonnes pour que ce soit lisible */
 @media (max-width: 768px) {
   .syllables-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Déjà correct pour les syllabes */
+  }
+
+  .syllable-card {
+    width: auto; /* Permet à la carte de s'adapter à la colonne du grid */
+    max-width: 140px;
   }
 }
 
@@ -317,27 +322,28 @@ section {
 }
 /* Style pour le Vocabulaire */
 
-/* Style de la phrase principale */
+/* --- SECTION APPRENDRE LA PHRASE --- */
 .main-sentence-card {
   display: flex;
+  flex-direction: row-reverse; /* Ordre : Image à droite, Texte à gauche sur PC */
   align-items: center;
-  justify-content: center; /* On centre les deux images dans la carte */
-  gap: 30px; /* Espace entre la phrase et l'illustration */
-  background: #fff;
-  padding: 25px;
-  border-radius: 30px;
-  border: 3px solid #4da3ff;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 25px;
   cursor: pointer;
-  max-width: 950px;
-  margin: 20px auto 40px auto;
+  transition: transform 0.2s;
 }
 
 /* Le bloc contenant le texte de la phrase */
 .sentence-text-block {
+  flex: 1;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 450px; /* Ta largeur pour l'image de la phrase */
+  gap: 15px;
 }
 
 .arabic-sentence {
@@ -347,18 +353,18 @@ section {
   line-height: 1.6;
 }
 
-/* L'image à droite */
+/* L'image d'illustration  */
 .sentence-img {
-  width: 250px; /* Ta dimension souhaitée */
+  width: 300px; /* Taille fixe sur PC */
   height: auto;
-  border-radius: 15px;
-  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
-/* Style spécifique pour l'image de la phrase Powerpoint */
+/* L'image de la phrase (le texte arabe) */
 .phrase-as-img {
-  width: 100%; /* Elle prendra les 450px du parent */
+  max-width: 100%;
   height: auto;
-  margin-bottom: 10px;
+  border-radius: 10px;
 }
 /* L'illustration à droite */
 
@@ -367,9 +373,28 @@ section {
   animation: syllablePulse 0.8s infinite;
 }
 .audio-hint {
-  color: #4da3ff;
-  font-weight: bold;
+  background: #4da3ff;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 50px;
   font-size: 14px;
+  font-weight: bold;
+}
+/* --- ADAPTATION TÉLÉPHONE (MOBILE) --- */
+@media (max-width: 768px) {
+  .main-sentence-card {
+    flex-direction: column; /* EMPILER : Image en haut, Phrase en bas */
+    gap: 20px;
+  }
+
+  .sentence-img {
+    width: 100%; /* L'image prend toute la largeur sur mobile */
+    max-width: 350px;
+  }
+
+  .sentence-text-block {
+    width: 100%;
+  }
 }
 
 /* Grille des mots découpés */
@@ -510,7 +535,13 @@ section {
 
 @media (max-width: 500px) {
   .vocab-grid {
-    grid-template-columns: 1fr; /* 1 seule colonne sur petit téléphone */
+    /* On change '1fr' par 'repeat(2, 1fr)' pour avoir 2 images par ligne */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* On réduit un peu l'espace pour que ça tienne bien */
+  }
+
+  .vocab-card .img-container {
+    height: 140px; /* On réduit un peu la hauteur sur petit mobile */
   }
 }
 /* Conteneur d'image optimisé pour Powerpoint */
@@ -1255,7 +1286,7 @@ section {
   border-radius: 10px;
 }
 
-/* section de telechargement */ 
+/* section de telechargement */
 .download-section {
   padding: 30px 15px;
   background-color: #f0f9ff; /* Bleu très clair */
@@ -1321,3 +1352,31 @@ section {
     width: 100%;
   }
 }
+/* Empêcher les boutons de déborder sur mobile */
+.download-btn,
+.next-btn {
+  display: inline-block; /* Permet de respecter les paddings */
+  max-width: 100%; /* Ne peut pas dépasser l'écran */
+  width: auto; /* S'adapte au texte */
+  min-width: 200px; /* Garde une taille confortable */
+  box-sizing: border-box; /* Inclut le padding dans la largeur */
+  white-space: normal; /* Autorise le texte à passer sur 2 lignes si besoin */
+  text-align: center;
+  padding: 12px 20px; /* Réduit un peu le padding sur les côtés */
+}
+
+/* Ajustement spécifique pour le conteneur du bouton suivant */
+.next-step {
+  padding: 20px;
+  overflow: hidden; /* Coupe tout ce qui dépasse par sécurité */
+}
+
+@media (max-width: 480px) {
+  .download-btn,
+  .next-btn {
+    font-size: 16px; /* Réduit légèrement la taille du texte */
+    padding: 10px 15px;
+    min-width: 150px; /* Plus petit pour les écrans étroits */
+  }
+}
+
