@@ -12,162 +12,162 @@ const games = [
 const vocabData = {
   "famille-frere": {
     instruction: "مَنْ هَذا؟",
-    audioInstruction: "../sounds/famille/cqui.mp3",
+    audioInstruction: "../sounds/famille/cqui.MP3",
     image: "../img/famille/frère.png",
     options: [
       {
         text: "هَذا أَخِي",
-        audio: "../sounds/famille/frere2.mp3",
+        audio: "../sounds/famille/frere2.MP3",
         correct: true,
       },
       {
         text: "هَذِهِ جَدَّتي",
-        audio: "../sounds/famille/g-mere2.mp3",
+        audio: "../sounds/famille/g-mere2.MP3",
         correct: false,
       },
       {
         text: "هَذا جَدِّي",
-        audio: "../sounds/famille/g-pere2.mp3",
+        audio: "../sounds/famille/g-pere2.MP3",
         correct: false,
       },
       {
         text: "هَذِهِ أُخْتِي",
-        audio: "../sounds/famille/soeur2.mp3",
+        audio: "../sounds/famille/soeur2.MP3",
         correct: false,
       },
     ],
   },
   "famille-soeur": {
     instruction: "مَنْ هَذِهِ؟",
-    audioInstruction: "../sounds/famille/cqui.mp3",
+    audioInstruction: "../sounds/famille/cqui.MP3",
     image: "../img/famille/soeur.png",
     options: [
       {
         text: "هَذِهِ أُخْتِي",
-        audio: "../sounds/famille/soeur2.mp3",
+        audio: "../sounds/famille/soeur2.MP3",
         correct: true,
       },
       {
         text: "هَذا أَبي",
-        audio: "../sounds/famille/pere2.mp3",
+        audio: "../sounds/famille/pere2.MP3",
         correct: false,
       },
       {
         text: "هَذِهِ أُمِّي",
-        audio: "../sounds/famille/mere2.mp3",
+        audio: "../sounds/famille/mere2.MP3",
         correct: false,
       },
       {
         text: "هَذا أَخِي",
-        audio: "../sounds/famille/frere2.mp3",
+        audio: "../sounds/famille/frere2.MP3",
         correct: false,
       },
     ],
   },
   "famille-pere": {
     instruction: "مَنْ هَذا؟",
-    audioInstruction: "../sounds/famille/cqui.mp3",
+    audioInstruction: "../sounds/famille/cqui.MP3",
     image: "../img/famille/père.png",
     options: [
       {
         text: "هَذا أَبي",
-        audio: "../sounds/famille/pere2.mp3",
+        audio: "../sounds/famille/pere2.MP3",
         correct: true,
       },
       {
         text: "هَذا جَدِّي",
-        audio: "../sounds/famille/g-pere2.mp3",
+        audio: "../sounds/famille/g-pere2.MP3",
         correct: false,
       },
       {
         text: "هَذا أَخِي",
-        audio: "../sounds/famille/frere2.mp3",
+        audio: "../sounds/famille/frere2.MP3",
         correct: false,
       },
       {
         text: "هَذِهِ أُمِّي",
-        audio: "../sounds/famille/mere2.mp3",
+        audio: "../sounds/famille/mere2.MP3",
         correct: false,
       },
     ],
   },
   "famille-mere": {
     instruction: "مَنْ هَذِهِ؟",
-    audioInstruction: "../sounds/famille/cqui.mp3",
+    audioInstruction: "../sounds/famille/cqui.MP3",
     image: "../img/famille/mère.png",
     options: [
       {
         text: "هَذِهِ أُمِّي",
-        audio: "../sounds/famille/mere2.mp3",
+        audio: "../sounds/famille/mere2.MP3",
         correct: true,
       },
       {
         text: "هَذِهِ جَدَّتي",
-        audio: "../sounds/famille/g-mere2.mp3",
+        audio: "../sounds/famille/g-mere2.MP3",
         correct: false,
       },
       {
         text: "هَذِهِ أُخْتِي",
-        audio: "../sounds/famille/soeur2.mp3",
+        audio: "../sounds/famille/soeur2.MP3",
         correct: false,
       },
       {
         text: "هَذا أَبي",
-        audio: "../sounds/famille/pere2.mp3",
+        audio: "../sounds/famille/pere2.MP3",
         correct: false,
       },
     ],
   },
   "famille-gpere": {
     instruction: "مَنْ هَذا؟",
-    audioInstruction: "../sounds/famille/cqui.mp3",
+    audioInstruction: "../sounds/famille/cqui.MP3",
     image: "../img/famille/grand-père.png",
     options: [
       {
         text: "هَذا جَدِّي",
-        audio: "../sounds/famille/g-pere2.mp3",
+        audio: "../sounds/famille/g-pere2.MP3",
         correct: true,
       },
       {
         text: "هَذا أَبي",
-        audio: "../sounds/famille/pere2.mp3",
+        audio: "../sounds/famille/pere2.MP3",
         correct: false,
       },
       {
         text: "هَذا أَخِي",
-        audio: "../sounds/famille/frere2.mp3",
+        audio: "../sounds/famille/frere2.MP3",
         correct: false,
       },
       {
         text: "هَذِهِ جَدَّتي",
-        audio: "../sounds/famille/g-mere2.mp3",
+        audio: "../sounds/famille/g-mere2.MP3",
         correct: false,
       },
     ],
   },
   "famille-gmere": {
     instruction: "مَنْ هَذِهِ؟",
-    audioInstruction: "../sounds/famille/cqui.mp3",
+    audioInstruction: "../sounds/famille/cqui.MP3",
     image: "../img/famille/grand-mère.png",
     options: [
       {
         text: "هَذِهِ جَدَّتي",
-        audio: "../sounds/famille/g-mere2.mp3",
+        audio: "../sounds/famille/g-mere2.MP3",
         correct: true,
       },
       {
         text: "هَذِهِ أُمِّي",
-        audio: "../sounds/famille/mere2.mp3",
+        audio: "../sounds/famille/mere2.MP3",
         correct: false,
       },
       {
         text: "هَذِهِ أُخْتِي",
-        audio: "../sounds/famille/soeur2.mp3",
+        audio: "../sounds/famille/soeur2.MP3",
         correct: false,
       },
       {
         text: "هَذا جَدِّي",
-        audio: "../sounds/famille/g-pere2.mp3",
+        audio: "../sounds/famille/g-pere2.MP3",
         correct: false,
       },
     ],
@@ -202,3 +202,4 @@ const imageDragData = {
     ],
   },
 };
+
