@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>قصة ليلى والذئب - Tifawt Académie</title>
+
+    <link rel="stylesheet" href="../styles/header-style.css" />
+    <link rel="stylesheet" href="../styles/histoire.css" />
+
+    <script src="sound.js" defer></script>
+    <script src="../js/menu.js"></script>
+  </head>
+  <body>
+    <header class="top-wrapper">
+      <div class="header-card">
+        <!-- PARTIE HAUTE -->
+        <div class="header-top">
+          <a href="../index.html" class="logo-link">
+            <img
+              src="../img/logo-tifawt.PNG"
+              alt="Logo Tifawt Académie"
+              class="logo-img"
+            />
+            <h1 class="site-title">Tifawt Académie</h1>
+          </a>
+
+          <div class="auth-buttons">
+            <a href="index.php" class="btn login">Connexion</a>
+            <a href="inscription.php" class="btn register">Inscription</a>
+          </div>
+        </div>
+
+        <!-- PARTIE BASSE -->
+        <nav class="header-nav">
+          <ul class="menu">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Cours ▾</a>
+              <ul class="submenu">
+                <li><a href="#">Arabe</a></li>
+                <li><a href="#">Mathématiques</a></li>
+                <li><a href="#">Français</a></li>
+                <li><a href="#">Vidéos</a></li>
+              </ul>
+            </li>
+
+            <li><a href="#">Histoires</a></li>
+            <li><a href="#">Vidéos</a></li>
+            <li><a href="espace.php">Espace Élève</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="lesson-badge">
+      <div class="badge-container">
+        <div class="badge-side side-fr">
+          <span class="level-tag"></span>
+          <h1>Le Petit Chaperon Rouge</h1>
+        </div>
+
+        <div class="badge-center">
+          <img src="../img/lila/lila0.jpg" alt="Wolf Icon" />
+        </div>
+
+        <div class="badge-side side-ar">
+          <h2 class="arabic-subtitle">قِصَّةُ لَيْلى وَالذِّئْب</h2>
+        </div>
+      </div>
+    </section>
+
+    <main class="story-container">
+      <section class="story-part">
+        <div class="story-content">
+          <div class="story-image">
+            <img src="../img/lila/qittati.jpg" alt="ليلى وأمها" />
+          </div>
+          <div class="story-text-box">
+            <p class="arabic-text">
+              قِطَّــــتِي صَغِيـرَة <br />
+              وَاسْـــمُـهَا نَــمِيرَة.<br />
+              شَـعْـــرُهَا جَمِيــل<br />
+              ذَيْــلُــهَا طَــوِيــل. <br />
+              لَعِــــبُــهَا يُسَــلِّــي<br />
+              وَهِيَ لِــي كَظِلِّي.<br />
+              عِـنْـدَهـا الْمَهــارة<br />
+              كَــيْ تَصيــدَ فَأْرَة.<br />
+            </p>
+            <button
+              class="audio-btn"
+              onclick="playCustomSound('../sounds/lila/chat.MP3', this)"
+            >
+              🔊 إستمع للنشيد
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer style="text-align: center; padding: 20px">
+      © 2025 Tifawt Académie
+    </footer>
+  </body>
+</html>
