@@ -1504,6 +1504,59 @@ quiz de vocabulaire
   animation: shake 0.4s ease-in-out;
   border: 3px solid #ef4444 !important; /* Bordure rouge */
 }
+/* =======================================
+   OPTIMISATION MOBILE (Écran < 768px)
+   ======================================= */
+@media (max-width: 768px) {
+  /* On réduit le conteneur bleu du haut */
+  .quiz-header-visual {
+    padding: 8px; /* On réduit le padding interne */
+    margin-bottom: 10px;
+  }
+
+  .instruction-box {
+    margin-bottom: 8px;
+    gap: 8px;
+  }
+
+  .instruction-text {
+    font-size: 0.9rem; /* Texte un peu plus petit */
+    margin: 0;
+  }
+
+  /* Image : on réduit la hauteur et on augmente la largeur */
+  .quiz-main-img {
+    width: 200px;  /* Plus large */
+    height: 100px; /* Moins haute */
+    border-width: 2px;
+  }
+
+  /* On réduit la hauteur des choix (la grille) */
+  .odd-one-grid {
+    gap: 8px; /* Moins d'espace entre les boutons */
+  }
+
+  .odd-card-text {
+    padding: 8px 12px !important; /* On réduit le rembourrage interne des boutons */
+    min-height: 40px !important;  /* On force une hauteur plus petite */
+    margin-bottom: 0 !important;
+  }
+
+  .arabic-word {
+    font-size: 1.1rem !important; /* On ajuste la taille du texte arabe */
+  }
+
+  /* Réduction des marges finales pour remonter les boutons Valider/Suivant */
+  .quiz-feedback {
+    margin-top: 5px;
+    font-size: 0.9rem;
+  }
+
+  .actions {
+    margin-top: 10px;
+    min-height: 40px;
+  }
+}
 
 
 
