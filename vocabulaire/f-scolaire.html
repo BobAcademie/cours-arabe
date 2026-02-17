@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="../styles/header-style.css" />
+    <link rel="stylesheet" href="../styles/lettreA1-2.css" />
+    <script src="js/menu.js"></script>
+    <title>المدرسة - Fournitures scolaires</title>
+  </head>
+
+  <body>
+    <header class="top-wrapper">
+      <div class="header-card">
+        <div class="header-top">
+          <a href="vocabulaire.html" class="logo-link">
+            <div class="logo-icon">📘</div>
+            <h1 class="site-title">Tifawt Académie</h1>
+          </a>
+
+          <div class="auth-buttons">
+            <a href="index.php" class="btn login">Connexion</a>
+            <a href="inscription.php" class="btn register">Inscription</a>
+          </div>
+        </div>
+
+        <nav class="header-nav">
+          <ul class="menu">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Cours ▾</a>
+              <ul class="submenu">
+                <li><a href="#">Arabe</a></li>
+                <li><a href="#">Mathématiques</a></li>
+                <li><a href="#">Français</a></li>
+                <li><a href="#">Vidéos</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Histoires & Chansons</a></li>
+            <li><a href="#">Vidéos</a></li>
+            <li><a href="espace.php">Espace Élève</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="lesson-badge">
+        <div class="badge-container">
+          <div class="badge-side side-fr">
+            <span class="level-tag">Niveau: A1-1</span>
+            <h1>La fourniture scolaires</h1>
+          </div>
+
+          <div class="badge-center">
+            <img
+              src="../img/f-scolaire/fourniture.png"
+              alt="Fournitures scolaires"
+              class="floating-letter"
+            />
+          </div>
+
+          <div class="badge-side side-ar">
+            <h2 class="arabic-subtitle">دَرْسٌ : أَدَواتِي الْمَدْرَسِيَّةُ</h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="letter-hero">
+        <div class="video-container">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/u_Fv_OqN6sI"
+            title="Apprendre les fournitures scolaires"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="quick-links">
+          <a href="#game-container" class="btn-link quiz-link">
+            <span class="icon">🎮</span> Commencer les Jeux
+          </a>
+          <a
+            href="fiches/fournitures-exercice.pdf"
+            target="_blank"
+            class="btn-link download-link"
+          >
+            <span class="icon">📄</span> Télécharger la Fiche (PDF)
+          </a>
+        </div>
+      </section>
+
+      <section class="letter-vocabulary">
+        <h2>Je découvre mes outils de classe</h2>
+        <div class="vocab-grid">
+          <div
+            class="vocab-card"
+            onclick="playCustomSound('../sounds/f-scolaire/stylo.MP3', this)"
+          >
+            <div class="img-container">
+              <img src="../img/f-scolaire/stylo.png" alt="Stylo" />
+            </div>
+            <div class="card-info">
+              <span class="arabic-word">قَلَمٌ</span>
+              <span class="audio-hint">Écouter 🔊</span>
+            </div>
+          </div>
+
+          <div
+            class="vocab-card"
+            onclick="playCustomSound('../sounds/f-scolaire/livre.MP3', this)"
+          >
+            <div class="img-container">
+              <img src="../img/f-scolaire/livre.jpg" alt="Livre" />
+            </div>
+            <div class="card-info">
+              <span class="arabic-word">كِتابٌ</span>
+              <span class="audio-hint">Écouter 🔊</span>
+            </div>
+          </div>
+
+          <div
+            class="vocab-card"
+            onclick="playCustomSound('../sounds/f-scolaire/Cahier.MP3', this)"
+          >
+            <div class="img-container">
+              <img src="../img/f-scolaire/Cahier.jpg" alt="Cahier" />
+            </div>
+            <div class="card-info">
+              <span class="arabic-word">دَفْتَرٌ</span>
+              <span class="audio-hint">Écouter 🔊</span>
+            </div>
+          </div>
+
+          <div
+            class="vocab-card"
+            onclick="playCustomSound('../sounds/f-scolaire/cartable.MP3', this)"
+          >
+            <div class="img-container">
+              <img src="../img/f-scolaire/cartable.jpeg" alt="Cartable" />
+            </div>
+            <div class="card-info">
+              <span class="arabic-word">مِحْفَظَةٌ</span>
+              <span class="audio-hint">Écouter 🔊</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="progress-container">
+        <div class="progress-header">
+          <span id="progress-text">Exercice 1 / 10</span>
+          <span id="progress-percentage">0%</span>
+        </div>
+        <div class="progress-bar-bg">
+          <div id="progress-fill"></div>
+        </div>
+      </div>
+
+      <section id="game-container"></section>
+    </main>
+
+    <footer>© 2025 Tifawt Académie</footer>
+
+    <script src="../js/sound.js"></script>
+    <script src="js/fourniture.js"></script>
+    <script src="js/lettre2.js"></script>
+  </body>
+</html>
