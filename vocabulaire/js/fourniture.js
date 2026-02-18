@@ -28,7 +28,7 @@ const vocabData = {
         correct: false,
       },
       {
-        text: "مِمْحَاةٌ",
+        text: "مِمْسَحَةٌ",
         audio: "../sounds/f-scolaire/effaceure.MP3",
         correct: false,
       },
@@ -114,7 +114,7 @@ const vocabData = {
         correct: false,
       },
       {
-        text: "مِمْحَاةٌ",
+        text: "مِمْسَحَةٌ",
         audio: "../sounds/f-scolaire/effaceure.MP3",
         correct: false,
       },
@@ -272,3 +272,4 @@ const imageDragData = {
     ],
   },
 };
+
