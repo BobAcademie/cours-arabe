@@ -73,7 +73,7 @@ const formsQuizData = {
 const audioQuizData = {
   "Ta2-audio-1": {
     instruction: "Écoute et choisis ce que Fatima coupe :",
-    audioPath: "../sounds/ta2/tomate.MP3",
+    audioPath: "../sounds/Ta2/tomate.MP3",
     options: [
       { text: "طَمَاطِم", correct: true },
       { text: "بَطَاطِس", correct: false },
@@ -82,7 +82,7 @@ const audioQuizData = {
   },
   "Ta2-audio-2": {
     instruction: "Écoute et choisis le mot que tu entends",
-    audioPath: "../sounds/ta2/marteau.MP3",
+    audioPath: "../sounds/Ta2/marteau.MP3",
     options: [
       { text: "مَطْبَخٌ", correct: false },
       { text: "مِطْرَقَةٌ", correct: true },
@@ -105,9 +105,9 @@ const imageDragData = {
   "Ta2-images": {
     instruction: "Associe l’image au bon mot du texte",
     images: [
-      { id: "tomate", src: "../img/lettre-ta2/tomate1.png" },
-      { id: "avion", src: "../img/lettre-ta2/avion1.png" },
-      { id: "medecin", src: "../img/lettre-ta2/medecin1.png" },
+      { id: "tomate", src: "../img/lettre-Ta2/tomate1.png" },
+      { id: "avion", src: "../img/lettre-Ta2/avion1.png" },
+      { id: "medecin", src: "../img/lettre-Ta2/medecin1.png" },
     ],
     words: [
       { word: "طَمَاطِم", match: "tomate" },
@@ -128,3 +128,4 @@ const quizData = {
     ],
   },
 };
+
