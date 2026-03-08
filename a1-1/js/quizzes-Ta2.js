@@ -95,9 +95,9 @@ const imageDragData = {
   "Ta2-images-1": {
     instruction: "Associe l’image au mot",
     images: [
-      { id: "avion", src: "../img/lettre-ta2/avion1.PNG" },
-      { id: "chat", src: "../img/lettre-ta2/chat1.PNG" },
-      { id: "tomate", src: "../img/lettre-ta2/tomate1.PNG" },
+      { id: "avion", src: "../img/lettre-Ta2/avion1.png" },
+      { id: "chat", src: "../img/lettre-Ta2/chat1.png" },
+      { id: "tomate", src: "../img/lettre-Ta2/tomate1.png" },
     ],
     words: [
       { word: "طائِـرَة", match: "avion" },
@@ -106,4 +106,5 @@ const imageDragData = {
     ],
   },
 };
+
 
