@@ -33,7 +33,7 @@ const formsQuizData = {
 const audioQuizData = {
   "Ta2-audio-1": {
     instruction: "Écoute bien et choisis le mot correspondant",
-    audioPath: "../sounds/ta2/avion.MP3",
+    audioPath: "../sounds/Ta2/avion.MP3",
     options: [
       { text: "طَائِرَةٌ", correct: true },
       { text: "طَبِيبٌ", correct: false },
@@ -42,7 +42,7 @@ const audioQuizData = {
   },
   "Ta2-audio-2": {
     instruction: "Écoute bien et choisis le mot correspondant",
-    audioPath: "../sounds/ta2/medecin.MP3",
+    audioPath: "../sounds/Ta2/medecin.MP3",
     options: [
       { text: "طَائِرَةٌ", correct: false },
       { text: "طَبِيبٌ", correct: true },
@@ -95,9 +95,9 @@ const imageDragData = {
   "Ta2-images-1": {
     instruction: "Associe l’image au mot",
     images: [
-      { id: "avion", src: "../img/lettre-ta2/avion1.png" },
-      { id: "chat", src: "../img/lettre-ta2/chat1.png" },
-      { id: "tomate", src: "../img/lettre-ta2/tomate1.png" },
+      { id: "avion", src: "../img/lettre-ta2/avion1.PNG" },
+      { id: "chat", src: "../img/lettre-ta2/chat1.PNG" },
+      { id: "tomate", src: "../img/lettre-ta2/tomate1.PNG" },
     ],
     words: [
       { word: "طائِـرَة", match: "avion" },
@@ -106,3 +106,4 @@ const imageDragData = {
     ],
   },
 };
+
