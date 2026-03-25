@@ -107,7 +107,7 @@ const imageDragData = {
     images: [
       { id: "barbecue", src: "../img/lettre-chine/grille.png" },
       { id: "arbre", src: "../img/lettre-chine/arbre.png" },
-      { id: "camion", src: "../img/lettre-chine/camion1.png" },
+      { id: "camion", src: "../img/lettre-chine/camion.png" },
     ],
     words: [
       { word: "مِشْوَاة", match: "barbecue" },
