@@ -1,0 +1,184 @@
+/* ==========================================
+   1. STYLES GÉNÉRAUX & LAYOUT
+   ========================================== */
+body {
+  background: linear-gradient(to bottom, #fdf6ec, #e0f2ff);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #123a5f;
+  margin: 0;
+  min-height: 100vh;
+}
+
+main.content {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ==========================================
+   2. HEADER & BADGE DE TITRE
+   ========================================== */
+.lesson-badge {
+  background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+  padding: 30px 40px;
+  margin: 20px auto 40px auto;
+  max-width: 1000px;
+  border-radius: 30px;
+  border-bottom: 5px solid #4da3ff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.badge-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.badge-side {
+  flex: 1;
+}
+.side-fr {
+  text-align: left;
+}
+.side-ar {
+  text-align: right;
+}
+
+.lesson-badge h1 {
+  margin: 0;
+  color: #1e40af;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.arabic-subtitle {
+  color: #1e40af;
+  font-size: 32px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.badge-center img {
+  width: 100px;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 10px 15px rgba(77, 163, 255, 0.3));
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* ==========================================
+   3. ZONE DE JEU (MATHÉMATIQUES)
+   ========================================== */
+#affichage-chrono {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #e74c3c;
+  margin-bottom: 20px;
+  background: white;
+  display: inline-block;
+  padding: 10px 30px;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#zone-question {
+  font-size: 3rem;
+  margin: 30px 0;
+  font-weight: bold;
+  color: #1e40af;
+}
+
+#zone-reponses {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Boutons de choix (QCM) */
+.btn-reponse {
+  padding: 25px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: 3px solid #3498db;
+  border-radius: 20px;
+  background: white;
+  color: #3498db;
+  transition: all 0.3s ease;
+}
+
+.btn-reponse:hover {
+  background: #3498db;
+  color: white;
+  transform: translateY(-5px);
+}
+
+/* Boutons Commencer / Rejouer */
+.btn-principal {
+  background-color: #2ecc71;
+  color: white;
+  padding: 20px 45px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #27ae60;
+  transition: all 0.2s;
+}
+
+.btn-principal:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.05);
+}
+
+.btn-principal:active {
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+/* Résultats */
+#resultat {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 20px 0;
+  min-height: 40px;
+}
+
+/* ==========================================
+   4. RESPONSIVE
+   ========================================== */
+@media (max-width: 768px) {
+  .badge-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .side-ar {
+    text-align: center;
+  }
+  #zone-question {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #zone-reponses {
+    grid-template-columns: 1fr;
+  }
+  .btn-reponse {
+    padding: 15px;
+  }
+}

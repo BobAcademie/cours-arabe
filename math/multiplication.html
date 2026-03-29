@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Quiz Multiplication</title>
+    <script src="js/menu.js"></script>
+    <!-- styles communs -->
+    <link rel="stylesheet" href="../styles/header-style.css" />
+    <!-- style de la page -->
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="top-wrapper">
+      <header class="top-wrapper">
+        <div class="header-card">
+          <!-- PARTIE HAUTE -->
+          <div class="header-top">
+            <a href="../index.html"> <div class="logo-icon">📘</div></a>
+            <h1 class="site-title">Tifawt Académie</h1>
+
+            <div class="auth-buttons">
+              <a href="index.php" class="btn login">Connexion</a>
+              <a href="inscription.php" class="btn register">Inscription</a>
+            </div>
+          </div>
+
+          <!-- PARTIE BASSE -->
+          <nav class="header-nav">
+            <ul class="menu">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle">Cours ▾</a>
+                <ul class="submenu">
+                  <li><a href="#">Arabe</a></li>
+                  <li><a href="#">Mathématiques</a></li>
+                  <li><a href="#">Français</a></li>
+                  <li><a href="#">Vidéos</a></li>
+                </ul>
+              </li>
+
+              <li><a href="#">Histoires</a></li>
+              <li><a href="#">Vidéos</a></li>
+              <li><a href="espace.php">Espace Élève</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </header>
+
+    <main class="content">
+      <!-- Section Titre de la leçon -->
+      <section class="lesson-badge">
+        <div class="badge-container">
+          <div class="badge-side side-fr">
+            <h1>La Multiplication</h1>
+          </div>
+
+          <div class="badge-center">
+            <img
+              src="../img/quiz-multiplication.jpg"
+              alt="Lettre Alif"
+              class="floating-letter"
+            />
+          </div>
+
+          <div class="badge-side side-ar">
+            <h2 class="arabic-subtitle">جدول الضرب</h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- LETTRES -->
+      <div id="ecran-accueil">
+        <button id="btn-commencer" class="btn-principal">
+          Commencer le Quiz
+        </button>
+      </div>
+
+      <div id="zone-jeu" style="display: none">
+        <div id="affichage-chrono">60</div>
+        <div id="zone-question">
+          <span id="nombre1">?</span> x <span id="nombre2">?</span> = ?
+        </div>
+        <div id="zone-reponses">
+          <button class="btn-reponse"></button>
+          <button class="btn-reponse"></button>
+          <button class="btn-reponse"></button>
+          <button class="btn-reponse"></button>
+        </div>
+      </div>
+
+      <div id="resultat"></div>
+
+      <div id="ecran-fin" style="display: none">
+        <button id="btn-rejouer" class="btn-principal">Rejouer</button>
+      </div>
+    </main>
+    <footer>© 2026 Tifawt Académie</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
