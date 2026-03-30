@@ -196,10 +196,15 @@ function renderQuiz(data) {
       feedback.textContent = "❌ Mauvaise réponse";
       feedback.style.color = "red";
 
-      // montrer la bonne réponse
-      document.querySelectorAll(".quiz-btn").forEach((btn, i) => {
-        if (data.answers[i].correct) {
-          btn.classList.add("correct");
+      // On parcourt tous les boutons créés à l'écran
+      document.querySelectorAll(".quiz-btn").forEach((btn) => {
+        // On cherche dans les données originales quelle réponse a "correct: true"
+        const isCorrectAnswer = data.answers.find(
+          (a) => a.text === btn.textContent && a.correct,
+        );
+
+        if (isCorrectAnswer) {
+          btn.classList.add("correct"); // On allume en vert le bouton qui contient le bon texte
         }
       });
     }
