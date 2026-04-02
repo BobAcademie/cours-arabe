@@ -72,33 +72,51 @@
         </div>
       </section>
 
-      <!-- LETTRES -->
-      <div id="ecran-accueil">
-        <button id="btn-commencer" class="btn-principal">
-          Commencer le Quiz
-        </button>
-      </div>
-
-      <div id="zone-jeu" style="display: none">
-        <div id="affichage-chrono">60</div>
-        <div id="zone-question">
-          <span id="nombre1">?</span> x <span id="nombre2">?</span> = ?
+      <div id="game-container">
+        <div id="ecran-accueil" class="text-center">
+          <h2>🎯 Entraîne-toi aux multiplications</h2>
+          <img
+            src="../img/quiz-multiplication.jpg"
+            alt="Math"
+            class="illustration-accueil"
+          />
+          <p>Prêt à devenir un champion des chiffres ?</p>
+          <button id="btn-commencer" class="btn-principal">
+            🚀 Commencer le Quiz
+          </button>
         </div>
-        <div id="zone-reponses">
-          <button class="btn-reponse"></button>
-          <button class="btn-reponse"></button>
-          <button class="btn-reponse"></button>
-          <button class="btn-reponse"></button>
+
+        <div id="zone-jeu" style="display: none">
+          <div class="jeu-stats">
+            <div id="affichage-chrono">60</div>
+            <div id="resultat">Prêt ?</div>
+            <div id="compteur-questions">
+              Question : <span id="actuelle">1</span>/10
+            </div>
+          </div>
+          <div id="zone-question">
+            <span id="nombre1">?</span> x <span id="nombre2">?</span> = ?
+          </div>
+          <div id="zone-reponses">
+            <button class="btn-reponse"></button>
+            <button class="btn-reponse"></button>
+            <button class="btn-reponse"></button>
+            <button class="btn-reponse"></button>
+          </div>
         </div>
-      </div>
 
-      <div id="resultat"></div>
+        <div id="resultat"></div>
 
-      <div id="ecran-fin" style="display: none">
-        <button id="btn-rejouer" class="btn-principal">Rejouer</button>
+        <div id="ecran-fin" style="display: none">
+          <div id="recap-final"></div>
+
+          <button id="btn-rejouer" class="btn-principal">Rejouer</button>
+        </div>
       </div>
     </main>
     <footer>© 2026 Tifawt Académie</footer>
+    <script src="../js/sound.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
+
