@@ -1,4 +1,65 @@
 /* ==========================================
+   2. HEADER & BADGE DE TITRE
+   ========================================== */
+.lesson-badge {
+  background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+  padding: 30px 40px;
+  margin: 20px auto 40px auto;
+  max-width: 1000px;
+  border-radius: 30px;
+  border-bottom: 5px solid #4da3ff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.badge-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.badge-side {
+  flex: 1;
+}
+.side-fr {
+  text-align: left;
+}
+.side-ar {
+  text-align: right;
+}
+
+.lesson-badge h1 {
+  margin: 0;
+  color: #1e40af;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.arabic-subtitle {
+  color: #1e40af;
+  font-size: 32px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.badge-center img {
+  width: 100px;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 10px 15px rgba(77, 163, 255, 0.3));
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* ==========================================
    1. STYLES GÉNÉRAUX & LAYOUT
    ========================================== */
 body {
@@ -14,6 +75,47 @@ main.content {
   margin: auto;
   padding: 20px;
   text-align: center;
+}
+
+/* ==========================================
+jeu stats
+============================================= */
+.jeu-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 10px;
+  border-bottom: 2px solid #f0f0f0; /* Petite ligne de séparation propre */
+}
+
+/* On force le chrono et le compteur à prendre la même largeur 
+   pour que le résultat soit parfaitement au centre mathématique */
+#affichage-chrono,
+#compteur-questions {
+  min-width: 80px;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+#affichage-chrono {
+  background: #ff5252;
+  color: white;
+}
+#compteur-questions {
+  background: #448aff;
+  color: white;
+}
+
+#resultat {
+  flex: 2; /* Prend plus de place au centre */
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1em;
+  min-height: 1.2em; /* Évite que la ligne saute quand c'est vide */
 }
 
 /* ==========================================
@@ -80,16 +182,32 @@ main.content {
 /* ==========================================
    3. ZONE DE JEU (MATHÉMATIQUES)
    ========================================== */
-#affichage-chrono {
-  font-size: 3rem;
-  font-weight: bold;
-  color: #e74c3c;
-  margin-bottom: 20px;
+#game-container {
   background: white;
-  display: inline-block;
-  padding: 10px 30px;
-  border-radius: 50px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 500px;
+  min-height: 400px; /* Taille fixe pour éviter les sauts d'écran */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.appreciation {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #ff9800;
+}
+
+/* On s'assure que les images ne sont pas trop grandes */
+.illustration-accueil {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 20px;
 }
 
 #zone-question {
@@ -118,6 +236,17 @@ main.content {
   background: white;
   color: #3498db;
   transition: all 0.3s ease;
+}
+
+.btn-reponse.correct {
+  background-color: #28a745 !important;
+  color: white;
+  transform: scale(1.05);
+}
+
+.btn-reponse.wrong {
+  background-color: #dc3545 !important;
+  color: white;
 }
 
 .btn-reponse:hover {
@@ -150,14 +279,33 @@ main.content {
   box-shadow: none;
 }
 
-/* Résultats */
-#resultat {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin: 20px 0;
-  min-height: 40px;
+/* L'animation de transition */
+@keyframes entreeQuestion {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Part de 20px plus bas */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Arrive à sa place réelle */
+  }
 }
 
+/* La classe que l'on va ajouter temporairement en JavaScript */
+.transition-active {
+  animation: entreeQuestion 0.4s ease-out;
+}
+
+#recap-final {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.final-score {
+  font-size: 1.5em;
+  color: #2c3e50;
+  margin-top: 10px;
+}
 /* ==========================================
    4. RESPONSIVE
    ========================================== */
@@ -182,3 +330,4 @@ main.content {
     padding: 15px;
   }
 }
+
