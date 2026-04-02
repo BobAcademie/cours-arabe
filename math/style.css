@@ -306,6 +306,34 @@ jeu stats
   color: #2c3e50;
   margin-top: 10px;
 }
+/* Style pour la zone de la médaille */
+#zone-medaille {
+    margin-bottom: 20px; /* Espace sous la médaille */
+    min-height: 120px;   /* Réserve de l'espace même si vide */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style pour l'image de la médaille elle-même */
+.img-medaille {
+    max-width: 100px; /* Taille maximale */
+    height: auto;
+    /* Petite animation d'apparition douce */
+    animation: apparitionMedaille 0.5s ease-out; 
+}
+
+/* Animation d'apparition */
+@keyframes apparitionMedaille {
+    from {
+        opacity: 0;
+        transform: scale(0.5) rotate(-15deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
 /* ==========================================
    4. RESPONSIVE
    ========================================== */
