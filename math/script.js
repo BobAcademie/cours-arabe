@@ -20,13 +20,21 @@ function lancerLeJeu() {
   score = 0;
   questionNb = 0;
 
-  // 2. Gérer l'affichage des écrans
+  // 2. Gestion du scroll sécurisée
+  const container = document.getElementById("game-container");
+  if (container) {
+    window.scrollTo({
+      top: container.offsetTop - 20,
+      behavior: "smooth",
+    });
+  }
+
+  // 3. Affichage
   ecranAccueil.style.display = "none";
   ecranFin.style.display = "none";
   zoneJeu.style.display = "block";
-  zoneResultat.textContent = "";
+  zoneResultat.textContent = "Bonne chance !";
 
-  // 3. Démarrer la logique
   demarrerChrono();
   genererCalcul();
 }
@@ -51,8 +59,21 @@ function genererCalcul() {
   let n2 = Math.floor(Math.random() * 10) + 1;
   reponseCorrecte = n1 * n2;
 
+  const zoneQuestion = document.getElementById("zone-question");
+  document.getElementById("actuelle").textContent = questionNb + 1;
+
+  // 1. On retire la classe d'animation (au cas où elle y soit déjà)
+  zoneQuestion.classList.remove("transition-active");
+
+  // 2. On force le navigateur à "oublier" l'ancienne animation (astuce technique)
+  void zoneQuestion.offsetWidth;
+
+  // 3. On met à jour les chiffres
   document.getElementById("nombre1").textContent = n1;
   document.getElementById("nombre2").textContent = n2;
+
+  // 4. On ajoute la classe pour lancer l'effet PowerPoint
+  zoneQuestion.classList.add("transition-active");
 
   genererChoix();
 }
@@ -64,43 +85,81 @@ function genererChoix() {
     if (!choix.includes(faux) && faux > 0) choix.push(faux);
   }
   choix.sort(() => Math.random() - 0.5);
-
+  let boutonsZone = document.getElementById("zone-reponses");
+  boutonsZone.classList.remove("transition-active");
+  void boutonsZone.offsetWidth;
+  boutonsZone.classList.add("transition-active");
   let boutons = document.querySelectorAll(".btn-reponse");
   boutons.forEach((btn, index) => {
     btn.textContent = choix[index];
     btn.onclick = function () {
-      verifierQCM(this.textContent);
+      verifierQCM(this);
     };
   });
 }
 
-function verifierQCM(valeurBouton) {
-  if (Number(valeurBouton) === reponseCorrecte) {
+function verifierQCM(boutonClique) {
+  // On récupère la valeur numérique du bouton
+  const valeurBouton = Number(boutonClique.textContent);
+
+  if (valeurBouton === reponseCorrecte) {
     score++;
+
+    // 1. On ajoute la couleur verte
+    boutonClique.classList.add("correct");
+
+    // 2. On joue le son de succès sur CE bouton précis
+    playSound("success");
+
     zoneResultat.textContent = "Bravo ! ✅";
-    zoneResultat.style.color = "green";
   } else {
+    // 1. On ajoute la couleur rouge
+    boutonClique.classList.add("wrong");
+
+    // 2. On joue le son d'erreur sur CE bouton
+    playSound("error");
+
     zoneResultat.textContent = "Faux ! ❌";
-    zoneResultat.style.color = "red";
   }
 
-  questionNb++;
-  if (questionNb >= 10) {
-    finirJeu("Quiz terminé !");
-  } else {
-    genererCalcul();
-  }
+  // Petit délai pour laisser l'enfant voir la couleur avant de changer de calcul
+  setTimeout(() => {
+    // On retire les couleurs pour le prochain calcul
+    boutonClique.classList.remove("correct", "wrong");
+
+    questionNb++;
+    if (questionNb >= 10) {
+      finirJeu("Quiz terminé !");
+    } else {
+      genererCalcul();
+    }
+  }, 600); // 600ms de pause
 }
 
 function finirJeu(message) {
   clearInterval(monChrono);
   zoneJeu.style.display = "none";
   ecranFin.style.display = "block";
-  zoneResultat.innerHTML = `<h3>${message}</h3><p>Score final : ${score}/10</p>`;
-  zoneResultat.style.color = "blue";
+
+  let appreciation = "";
+  if (score === 10) appreciation = "🏆 Incroyable ! Un sans-faute !";
+  else if (score >= 7)
+    appreciation = "🌟 Très bien ! Tu es presque un expert !";
+  else if (score >= 5) appreciation = "👍 Pas mal ! Continue de t'entraîner.";
+  else appreciation = "💪 Ne lâche rien, réessaie encore !";
+
+  // ON CHANGE ICI : on cible une zone visible dans l'écran de fin
+  const zoneFin = document.getElementById("recap-final");
+
+  zoneFin.innerHTML = `
+    <h3>${message}</h3>
+    <p class="appreciation">${appreciation}</p>
+    <p class="final-score">Score final : <strong>${score}/10</strong></p>
+  `;
 }
 
 // --- 4. Ecouteurs d'événements (Le clic sur les boutons) ---
 
 document.getElementById("btn-commencer").onclick = lancerLeJeu;
 document.getElementById("btn-rejouer").onclick = lancerLeJeu;
+
