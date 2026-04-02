@@ -142,15 +142,33 @@ function finirJeu(message) {
   ecranFin.style.display = "block";
 
   let appreciation = "";
-  if (score === 10) appreciation = "🏆 Incroyable ! Un sans-faute !";
-  else if (score >= 7)
+  let imageMedaille = ""; // Nouvelle variable pour l'image
+
+  // LOGIQUE DES RÉCOMPENSES
+  if (score === 10) {
+    appreciation = "🏆 Incroyable ! Un sans-faute !";
+    // Chemin vers ta médaille d'or
+    imageMedaille =
+      '<img src="../img/medaille-or.png" alt="Médaille d\'or" class="img-medaille">';
+  } else if (score >= 7) {
     appreciation = "🌟 Très bien ! Tu es presque un expert !";
-  else if (score >= 5) appreciation = "👍 Pas mal ! Continue de t'entraîner.";
-  else appreciation = "💪 Ne lâche rien, réessaie encore !";
+    // Chemin vers ta médaille d'argent
+    imageMedaille =
+      '<img src="../img/medaille-argent.png" alt="Médaille d\'argent" class="img-medaille">';
+  } else if (score >= 5) {
+    appreciation = "👍 Pas mal ! Continue de t'entraîner.";
+    // Pas de médaille, on laisse vide
+    imageMedaille = "";
+  } else {
+    appreciation = "💪 Ne lâche rien, réessaie encore !";
+    imageMedaille = "";
+  }
 
-  // ON CHANGE ICI : on cible une zone visible dans l'écran de fin
+  // AFFICHAGE DE LA MÉDAILLE
+  document.getElementById("zone-medaille").innerHTML = imageMedaille;
+
+  // AFFICHAGE DU RECAP (Déjà en place)
   const zoneFin = document.getElementById("recap-final");
-
   zoneFin.innerHTML = `
     <h3>${message}</h3>
     <p class="appreciation">${appreciation}</p>
